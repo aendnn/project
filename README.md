@@ -1,1 +1,1 @@
-first project with student 
+Артём Сухов
