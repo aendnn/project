@@ -3,40 +3,108 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Каталог — Магазина мороженого «Glacy Shop»</title>
+  <title>Каталог — Магазина мороженого «Gllacy Shop»</title>
 </head>
 
 <body>
   <div>
     <header>
       <nav>
-        <a>
-          <img src="img/index-logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженого «Glacy Shop»">
-        </a>
-        <ul>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="blank.html">Доставка и оплата</a></li>
-          <li><a href="blank.html">О компании</a></li>
-        </ul>
         <section>
-          <h2>Поиск</h2>
-          <!-- Здесь будет форма логина -->
-          <button type="button">Закрыть</button>
+          <h2>Vагазин мороженого Глэйси</h2>
+          <a href="index.html">
+            <img src="img/index-logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженого «Gllacy Shop»">
+          </a>
+          <ul>
+            <li><a href="catalog.html">Каталог</a>
+              <ul>
+                <li>
+                  <a href="product.html">
+                    <b>Новинки</b>
+                  </a>
+                </li>
+                <li>
+                  <a href="catalog.html">Сливочноe</a>
+                </li>
+                <li>
+                  Щербеты
+                </li>
+                <li>
+                  Фруктовый лед
+                </li>
+                <li>
+                  Мелорин
+                </li>
+              </ul>
+            </li>
+            <li><a href="blank.html">Доставка и оплата</a></li>
+            <li><a href="blank.html">О компании</a></li>
+          </ul>
         </section>
         <section>
-          <h2>Личный кабинет</h2>
-          <p>Введите пожалуйста свой логин и пароль</p>
-          <!-- Здесь будет форма логина -->
-          <button type="button">Закрыть</button>
+          <div>
+            <h2>Поиск</h2>
+            <!-- Здесь будет форма поиска -->
+            <input type="search"><!-- Подписи нет. Будет заглушка. Для видимости оставил пока -->
+          </div>
+          <div>
+            <h2>Личный кабинет</h2>
+            <p>Введите пожалуйста свой логин и пароль</p>
+            <!-- Здесь будет форма логина -->
+            <button type="submit">Войти</button>
+          </div>
+          <div>
+            <h2>Корзина</h2>
+            <a href="#">Пусто</a>
+            <div>
+              <h2>Когда есть товары</h2>
+              <table>
+                <tr>
+                  <td>
+                    <a href="#"><img src="img/X.jpg" alt="Удаление"></a>
+                  </td>
+                  <td>
+                    <img src="img/IceCreame1.jpg" alt="Пломбир с апельсиновым джемом">
+                  </td>
+                  <td>
+                    Пломбир с апельсиновым джемом
+                  </td>
+                  <td>
+                    <p>
+                      <b>1,5 кг х</b> 200 руб.
+                    </p>
+                  </td>
+                  <td>
+                    300 руб.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#"><img src="img/X.jpg" alt="Удаление"></a>
+                  </td>
+                  <td>
+                    <img src="img/IceCreame2.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  </td>
+                  <td>
+                    Клубничный пломбир с присыпкой <br>из белого шоколада
+                  </td>
+                  <td>
+                    <p>
+                      <b>1,5 кг х</b> 300 руб.
+                    </p>
+                  </td>
+                  <td>
+                    450
+                  </td>
+                </tr>
+              </table>
+              <p>
+                <b>Итого: 750 руб.</b>
+              </p>
+              <button type="submit">Оформить заказ</button>
+            </div>
+          </div>
         </section>
-        <section>
-          <h2>Корзина</h2>
-          <!-- Здесь будет форма корзины с товарами -->
-          <button type="button">Закрыть</button>
-        </section>
-        <p><b>с 10 до 20, ежедневно</b><br>
-          <a href="tel:+79001111111">8-812-450-25-25</a>
-        </p>
       </nav>
     </header>
     <main>
@@ -46,7 +114,7 @@
           <a href="index.html">Главная</a>
         </li>
         <li>
-          <a href="catalog.html">Магазин</a>
+          <a href="catalog.html">Каталог</a>
         </li>
         <li>
           Сливочное
@@ -58,7 +126,7 @@
         <!-- Здесь будет форма фильтра -->
       </section>
       <section>
-        <h2>Список сливочного мороженого</h2>
+        <h2>Сливочное мороженое</h2>
         <ul>
           <li>
             <a href="product.html">
@@ -67,8 +135,10 @@
                 <p><b>310 ₽</b>/кг</p>
               </div>
               <h4>Сливочное с апельсиновым <br>джемом и цитрусовой стружкой</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -77,8 +147,10 @@
                 <p><b>380 ₽</b>/кг</p>
               </div>
               <h4>Сливочно-кофейное с кусочками <br>шоколада</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -87,8 +159,10 @@
                 <p><b>355 ₽</b>/кг</p>
               </div>
               <h4>Сливочно-клубничное с <br>присыпкой из белого шоколада</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -97,8 +171,10 @@
                 <p><b>415 ₽</b>/кг</p>
               </div>
               <h4>Сливочное крем-брюле <br>с карамельной подливкой</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -107,8 +183,10 @@
                 <p><b>325 ₽</b>/кг</p>
               </div>
               <h4>Сливочное с брусничным <br>джемом</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -117,8 +195,10 @@
                 <p><b>410 ₽</b>/кг</p>
               </div>
               <h4>Сливочно-черничное с цельными <br>ягодами черники</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -127,8 +207,10 @@
                 <p><b>315 ₽</b>/кг</p>
               </div>
               <h4>Сливочно-лимонное с <br>карамельной присыпкой</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -137,8 +219,10 @@
                 <p><b>320 ₽</b>/кг</p>
               </div>
               <h4>Сливочное с шоколадной <br>стружкой</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -147,8 +231,10 @@
                 <p><b>440 ₽</b>/кг</p>
               </div>
               <h4>Сливочно-ванильное <br>с кусочками шоколада</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -157,8 +243,10 @@
                 <p><b>435 ₽</b>/кг</p>
               </div>
               <h4>Сливочноe с ментоловым <br>сиропом</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -167,8 +255,10 @@
                 <p><b>355 ₽</b>/кг</p>
               </div>
               <h4>Сливочное с кусочками черного <br>шоколада</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
           <li>
             <a href="product.html">
@@ -177,8 +267,10 @@
                 <p><b>420 ₽</b>/кг</p>
               </div>
               <h4>Сливочное с мятным сиропом</h4>
-              <button>Быстрый просмотр</button>
             </a>
+            <form>
+              <button type="submit" formaction="Catalog.html">Быстрый просмотр</button>
+            </form>
           </li>
         </ul>
         <ul>
@@ -198,13 +290,14 @@
             <a href="#">5</a>
           </li>
           <li>
-            <button type="button">></button>
+            <a href="#">></a>
           </li>
         </ul>
       </section>
     </main>
     <footer>
       <section>
+        <h2>Мы в соцсетях</h2>
         <ul>
           <li>
             <a href="#">Фейсбук</a>
@@ -221,15 +314,16 @@
         </ul>
       </section>
       <section>
+        <h2>Информация о нас</h2>
         <ul>
           <li>
             <a href="#"><b>Для поставщиков</b></a>
           </li>
           <li>
-            <a href="#">О производстве</a>
+            <a href="#">Наши документы</a>
           </li>
           <li>
-            <a href="#">Наши документы</a>
+            <a href="#">О производстве</a>
           </li>
           <li>
             <a href="#">Экологические стандарты</a>
@@ -237,12 +331,14 @@
         </ul>
       </section>
       <section>
-        <a>
+        <h2>Сделано</h2>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img src="img/index-logo.svg" width="154" height="64" alt="Логотип HTML Academy">
         </a>
         <p>
           Сделано в
-          <a href="https://htmlacademy.ru">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          © 2019
         </p>
       </section>
     </footer>
