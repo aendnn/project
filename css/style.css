@@ -1,45 +1,39 @@
 /* fonts */
-/* roboto-regular - latin */
+/* roboto-regular - cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   src: local('Roboto'),
-    url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-regular.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/roboto-v30-cyrillic-regular.woff2') format('woff2'),
+    url('../fonts/roboto-v30-cyrillic-regular.woff') format('woff');
 }
 
-/* roboto-500 - latin */
+/* roboto-500 - cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   src: local('Roboto'),
-    url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-500.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/roboto-v30-cyrillic-500.woff2') format('woff2'),
+    url('../fonts/roboto-v30-cyrillic-500.woff') format('woff');
 }
 
-/* roboto-700 - latin */
+/* roboto-700 - cyrillic */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   src: local('Roboto'),
-    url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-    url('../fonts/roboto-v30-latin-700.woff') format('woff');
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../fonts/roboto-v30-cyrillic-700.woff2') format('woff2'),
+    url('../fonts/roboto-v30-cyrillic-700.woff') format('woff');
 }
 
 :root {
   /* index-slider */
   --dark-green: #849D8F;
   --blue-gray: #8996A6;
-  --brown-light: #9D8B84;
+  --light-brown: #9D8B84;
   /* body-colors */
   --basic-white: #FFFFFF;
   --full-black: #323232;
@@ -60,13 +54,12 @@
 
 body {
   mid-width: 1200px;
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: 700;
   background-color: var(--dark-green);
-  background-repeat: no-repeat;
   color: var(--basic-white);
+  font-size: 16px;
+  line-height: 22px;
 }
 
 img {
@@ -75,13 +68,16 @@ img {
 }
 
 .site-navigation-list {
-  font-size: 16px;
   line-height: 18px;
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .catalog-navigation {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .page-body a {
@@ -106,7 +102,6 @@ h1 {
 
 .big-offers {
   text-align: center;
-  font-weight: 700;
 }
 
 .big-offers-list-slider {
@@ -135,11 +130,8 @@ h1 {
 
 .slider-button-list {
   list-style: none;
-}
-
-.promotions-item {
-  width: 560px;
-  height: 229px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .promotions-item h3 {
@@ -149,7 +141,6 @@ h1 {
 
 .promotions-item-text {
   font-size: 18px;
-  line-height: 22px;
 }
 
 .promotions-item-link {
@@ -173,8 +164,6 @@ h1 {
 
 .hits-list h3 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
 }
 
 .button-quick-view {
@@ -194,12 +183,12 @@ h1 {
 
 .advantages-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .advantages-item-text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
 }
 
 .article {
@@ -208,12 +197,9 @@ h1 {
 
 .article-caption {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
 }
 
 .article-text {
-  font-weight: 700;
   font-size: 24px;
   line-height: 30px;
 }
@@ -229,8 +215,6 @@ h1 {
 
 .newsletter-text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
 }
 
 .contacts {
@@ -248,17 +232,20 @@ h1 {
 }
 
 .contacts-adress b {
-  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
 }
 
 .footer-social-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .footer-contacts-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .footer-contacts-link {
@@ -279,16 +266,6 @@ h1 {
 }
 
 /* catalog */
-.page-body {
-  mid-width: 1200px;
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Roboto';
-  font-weight: 700;
-  background-color: var(--dark-green);
-  background-repeat: no-repeat;
-  color: var(--basic-white);
-}
 
 .site-navigation-button {
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
@@ -301,8 +278,6 @@ h1 {
 }
 
 .site-navigation-item {
-  font-weight: 700;
-  font-size: 16px;
   line-height: 18px;
 }
 
@@ -315,6 +290,8 @@ h1 {
 
 .catalog-breadcrumbs-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .catalog-breadcrumbs-item {
@@ -325,10 +302,11 @@ h1 {
 
 .catalog-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 .catalog-item-text {
-  font-weight: 700;
   font-size: 30px;
   line-height: 35px;
 }
@@ -340,9 +318,10 @@ h1 {
 
 .catalog-item h3 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
 }
+
 .pagination-list {
   list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
