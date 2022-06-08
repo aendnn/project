@@ -99,7 +99,7 @@
               <p class="cart-total">
                 <b>Итого: 750 руб.</b>
               </p>
-              <a class="button button-checkout"href="blank.html">Оформить заказ</a>
+              <a class="button button-checkout" href="blank.html">Оформить заказ</a>
             </div>
           </div>
         </section>
@@ -110,8 +110,8 @@
       </div>
     </header>
     <main class="catalog-content">
-      <section class="catalog">         <!-- не знаю как назвать -->
-        <h1>Сливочное мороженое</h1>
+      <section class="catalog">
+        <!-- не знаю как назвать -->
         <ul class="catalog-breadcrumbs-list">
           <li class="catalog-breadcrumbs-item">
             <a class="catalog-breadcrumbs-link" href="index.html">Главная</a>
@@ -123,8 +123,52 @@
             Сливочное
           </li>
         </ul>
-        <h2>Фильтр товаров</h2>
-        <!-- Здесь будет форма фильтра -->
+        <h1>Сливочное мороженое</h1>
+        <div class="product-filter">
+          <h2>Фильтр товаров</h2>
+          <form action="https://echo.htmlacademy.ru/courses" method="post">
+            <fieldset>
+              <h3 class="filters-title">Сортировка:</h3>
+              <label for="filter"></label>
+              <select class="filter-sorting" name="filter" id="filter">
+                <option selected value="по популярности">по популярности</option>
+                <option value="сначала недорогие">сначала недорогие</option>
+                <option value="сначала дорогие">сначала дорогие</option>
+                <option value="по жирности">по жирности</option>
+              </select>
+            </fieldset>
+            <fieldset>
+              <h3 class="price-title">Цена 100-500р</h3> <!-- хуй знает как сделать его. ну это не заголовок!! -->
+              <label for="price">Цена:</label>
+              <input type="range" min="50" max="1000" step="100" id="price" value="100">
+            </fieldset>
+            <fieldset>
+              <h3 class="filters-title">Жирность:</h3>
+              <label class="filter-fat" for="fat-1">0%</label>
+              <input type="radio" name="fat-1" id="fat-1" value="0%">
+              <label class="filter-fat" for="fat-2">до 10%</label>
+              <input type="radio" name="fat-2" id="fat-1" value="<10%" checked>
+              <label class="filter-fat" for="fat-3">до 30%</label>
+              <input type="radio" name="fat-3" id="fat-1" value="<30%">
+              <label class="filte-fat" for="fat-4"> выше 30%</label>
+              <input type="radio" name="fat-4" id="fat-1" value="30% +">
+            </fieldset>
+            <fieldset>
+              <h3 class="filters-title">Наполнители:</h3> <!-- Есть ли в чекбоксе какой-то валью? Value -->
+              <label class="filter-extender" for="extender-1">шоколадные</label>
+              <input type="checkbox" name="Choco" id="extender-1" checked>
+              <label class="filter-extender" for="extender-2">сахарные присыпки</label>
+              <input type="checkbox" name="Sugar" id="extender-2" checked>
+              <label class="filter-extender" for="extender-3">фрукты</label>
+              <input type="checkbox" name="fruits" id="extender-3">
+              <label class="filter-extendert" for="extender-4">сиропы</label>
+              <input type="checkbox" name="Sirop" id="extender-4">
+              <label class="filter-extender" for="extender-5">джемы</label>
+              <input type="checkbox" name="jam" id="extender-5">
+            </fieldset>
+            <button class="filter-button" type="submit">Применить</button>
+        </div>
+        </form><!-- Здесь будет форма фильтра -->
         <ul class="catalog-list">
           <li class="catalog-item">
             <a class="catalog-item-link" href="product.html">
