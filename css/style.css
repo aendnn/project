@@ -67,6 +67,10 @@ img {
   height: auto;
 }
 
+.site-navigation-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .site-navigation-list {
   line-height: 18px;
   list-style: none;
@@ -206,13 +210,13 @@ a {
   font-weight: 500;
 }
 
-.article-text {
+.article-text-link {
   font-size: 24px;
   line-height: 30px;
 }
 
-.article-text b {
-  border: 2px solid #353535;
+.article-text-link b {
+  border-bottom: 2px solid #353535;
 }
 
 .newsletter {
@@ -272,12 +276,29 @@ a {
 }
 
 /* button-style-guide */
-.site-navigation-button  {
+.site-navigation-button {
   background-color: var(--catalog-red);
   border-radius: 26px;
   line-height: 18px;
   color: var(--basic-white)
 }
+
+.big-offers-link:hover {
+  color: #FFBC9E;
+}
+
+.big-offers-link:active {
+  color: #FFBC9E;
+}
+
+.hits-item-link:hover {
+  color: #FFBC9E;
+}
+
+.hits-item-link:active {
+  color: #FFBC9E;
+}
+
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0px 2px 2px #AC1000;
@@ -294,6 +315,39 @@ a {
   border-radius: 26px;
   color: var(--full-black);
   background-color: var(--basic-white);
+}
+
+.feedback-form {
+  background: #F8F7F4;
+  border-radius: 6px;
+}
+
+.article-text-link:hover {
+  color: #E84D37;
+}
+
+.article-text-link:active {
+  color: #E84D37;
+}
+
+.footer-contacts-link:hover {
+  color: #FFBC9E;
+}
+
+.footer-contacts-link:active {
+  color: #FFBC9E;
+}
+
+.footer-copyright-link:hover {
+  color: #FFBC9E;
+}
+
+.footer-copyright-link:active {
+  color: #FFBC9E;
+}
+
+.filter-sorting:hover {
+  color: #323232;
 }
 
 /* catalog */
@@ -314,6 +368,19 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+}
+
+.filter-group {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.filter-sorting {
+  /* пока задал такой цвет. нужно будет убрать само поле фильтра */
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--blue-gray);
 }
 
 .catalog-list {

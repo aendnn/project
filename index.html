@@ -197,7 +197,7 @@
         <article class="article">
           <h2>Блог</h2> <!-- просто показал заголовок-->
           <p class="article-caption">Новое в нашем блоге</p>
-          <a class="article-text" href="blog.html"><b>10 способов сервировки <br>фруктовых щербетов <br>к столу</b></a>
+          <a class="article-text-link" href="blog.html"><b>10 способов сервировки <br>фруктовых щербетов <br>к столу</b></a>
         </article>
         <section class="newsletter">
           <h2>Подписка на рассылку</h2> <!-- просто показал заголовок-->
@@ -274,6 +274,26 @@
           <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
           © 2022
         </p>
+      </section>
+      <section class="social-feedback">
+        <h2 class="feedback-tittle">Мы обязательно вам ответим!</h2>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/courses" post>
+          <legend>Мы обязательно вам ответим!</legend>
+          <div>
+            <label class="feedback-login" for="username">Имя Фамилия</label>
+            <input class="feedback-login-input" type="text" name="username" id="username" placeholder="Имя Фамилия">
+          </div>
+          <div>
+          <label class="feedback-email" for="feedback-email">Введите вашу почту</label>
+          <input class="feedback-email-input" type="email" name="email" id="feedback-email" placeholder="email@example.com">
+          </div>
+          <div>
+          <label class="feedback-letter" for="textarea-letter">В свободной форме</label>
+          <textarea class="feedback-textarea" name="feedback-textarea" id="textarea-letter">В свободной форме</textarea>
+          </div>
+          <button class="button feedback-button" type="submit">Отправить</button>
+          <button class="button feedback-button-close" type="button">Закрыть</button>
+        </form>
       </section>
     </footer>
   </div>
