@@ -1,4 +1,4 @@
-/* fonts */
+/* font */
 /* roboto-regular - cyrillic */
 @font-face {
   font-family: 'Roboto';
@@ -85,15 +85,22 @@ img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.all-catalog:hover {
+.site-navigation-link:hover {
   border-radius: 26px;
   color: var(--full-black);
   background-color: var(--basic-white);
 }
 
+.site-navigation-link:active {
+  background: #EDEDED;
+  box-shadow: inset 0px 2px 1px #696969;
+  border-radius: 26px;
+}
+
 .site-navigation-button {
   background-color: var(--catalog-red);
-  color: var(--basic-white) border-radius: 26px;
+  color: var(--basic-white);
+  border-radius: 26px;
   line-height: 18px;
 }
 
@@ -114,8 +121,16 @@ img {
   line-height: 18px;
 }
 
+.catalog-navigation {
+  background-color: var(--basic-white);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
 .catalog-navigation-link {
   color: var(--full-black);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
 }
 
 .catalog-navigation-link:hover {
@@ -209,12 +224,12 @@ img {
 }
 
 .promotions-item {
-  background-image: url("../img/promotions/malina-back.jpg");
+  background-image: url("../img/malina-back.jpg");
   background-repeat: no-repeat;
 }
 
 .promotions-item:last-child {
-  background-image: url("../img/promotions/shocko-back.jpg");
+  background-image: url("../img/shocko-back.jpg");
   background-repeat: no-repeat;
 }
 
@@ -241,7 +256,7 @@ img {
 }
 
 .hits-item-text {
-  background-image: url("../img/hits/HIT.svg");
+  background-image: url("../img/icon-svg/hit.svg");
   position: absolute;
 }
 
@@ -267,7 +282,7 @@ img {
 /* advantages */
 .advantages {
   color: var(--full-black);
-  background-image: url("../img/pattern/Patern.jpg");
+  background-image: url("../img/pattern.jpg");
   background-repeat: no-repeat;
 }
 
@@ -288,26 +303,26 @@ img {
 }
 
 .ice-cream {
-  background-image: url("../img/pattern/Мороженое.svg");
+  background-image: url("../img/icon-svg/icecream.svg");
   /* Тестил  пнг но супер сильно ебется качество. думал за счёт примитивных цветов пнг может быть. хуй */
   background-repeat: no-repeat;
   background-size: auto auto;
 }
 
 .leaf {
-  background-image: url("../img/pattern/Листик.svg");
+  background-image: url("../img/icon-svg/leaf.svg");
   background-repeat: no-repeat;
   background-size: auto auto;
 }
 
 .cow {
-  background-image: url("../img/pattern/Корова.svg");
+  background-image: url("../img/icon-svg/cow.svg");
   background-repeat: no-repeat;
   background-size: auto auto;
 }
 
 .thermometer {
-  background-image: url("../img/pattern/Градусник.svg");
+  background-image: url("../img/icon-svg/thermometer.svg");
   background-repeat: no-repeat;
   background-size: auto auto;
 }
@@ -315,7 +330,7 @@ img {
 /* article */
 .article {
   color: var(--full-black);
-  background-image: url("../img/blog/Клубничный фон.jpg");
+  background-image: url("../img/strawberry-back.jpg");
   background-repeat: no-repeat;
 }
 
@@ -395,19 +410,19 @@ img {
 }
 
 .fb {
-  background-image: url("../img/social/fb.svg");
+  background-image: url("../img/icon-svg/fb.svg");
 }
 
 .vk {
-  background-image: url("../img/social/vk.svg");
+  background-image: url("../img/icon-svg/vk.svg");
 }
 
 .inst {
-  background-image: url("../img/social/inst.svg");
+  background-image: url("../img/icon-svg/inst.svg");
 }
 
 .tw {
-  background-image: url("../img/social/twitter.svg");
+  background-image: url("../img/icon-svg/twitter.svg");
 }
 
 .footer-contacts-link {
@@ -426,7 +441,7 @@ img {
 }
 
 .heart {
-  background-image: url("../img/social/heart.svg");
+  background-image: url("../img/icon-svg/heart.svg");
   background-repeat: no-repeat;
 }
 
@@ -582,4 +597,53 @@ img {
   margin: 0;
   padding: 0;
 }
+
 /* Аня пися */
+.form-search {
+  background: #F8F7F4;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  height: 84px;
+}
+
+.search-label {
+  background: #FFFFFF;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+}
+
+.form-login {
+  background: #FFFFFF;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+}
+
+.sign-block {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.email-input {
+  background: #FFFFFF;
+  border: 1px solid #D3D3D2;
+  border-radius: 4px;
+}
+
+.form-login-link {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #323232;
+  border-bottom: 2px solid #353535;
+}
+
+.svg {
+  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icecream-jpg {
+  border-radius: 50%;
+}
