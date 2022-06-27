@@ -75,26 +75,28 @@ img {
 
 /* header/site-navigation */
 .site-navigation-list {
-  line-height: 18px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.site-navigation-item {
+.site-navigation-link {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 18px;
 }
 
 .site-navigation-link:hover {
   border-radius: 26px;
   color: var(--full-black);
   background-color: var(--basic-white);
+  border-bottom: none;
 }
 
 .site-navigation-link:active {
   background: #EDEDED;
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
+  border-bottom: none;
 }
 
 .site-navigation-button {
@@ -120,13 +122,13 @@ img {
   padding: 0;
 }
 
-.catalog-navigation-item {
+.catalog-navigation-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
 
-.catalog-navigation-item b {
+.catalog-navigation-link b {
   font-size: 14px;
   line-height: 18px;
 }
@@ -141,11 +143,11 @@ img {
   border-radius: 4px;
 }
 
-.catalog-navigation-link:hover {
+.catalog-navigation-link:not(.current-page):hover {
   background: #FBDED7;
 }
 
-.catalog-navigation-link:active {
+.catalog-navigation-link:not(.current-page):active {
   background: #F6B5A5;
 }
 
@@ -200,18 +202,18 @@ img {
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0px 2px 2px #AC1000;
-  border-radius: 70px;
 }
 
 .button:active {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: inset 0px 2px 2px #942718;
-  border-radius: 70px;
 }
 
 .button-give-two {
   font-size: 32px;
   line-height: 44px;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 .big-offers-item-text {
@@ -248,13 +250,20 @@ img {
 }
 
 .promotions-item-link {
-  font-size: 18px;
-  line-height: 24px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 /* hits */
 .hits-list {
   list-style: none;
+}
+
+.hits-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hits-item-link h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hits-item-link h3:hover {
@@ -282,8 +291,7 @@ img {
 }
 
 .button-quick-view {
-  font-size: 18px;
-  line-height: 24px;
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 /* advantages */
@@ -311,29 +319,26 @@ img {
   font-weight: 400;
 }
 
-.ice-cream {
+.advantages-item {
+  background-repeat: no-repeat;
+  background-size: auto auto;
+}
+
+.advantages-ice-cream {
   background-image: url("../img/icon-svg/icecream.svg");
   /* Тестил  пнг но супер сильно ебется качество. думал за счёт примитивных цветов пнг может быть. хуй */
-  background-repeat: no-repeat;
-  background-size: auto auto;
 }
 
-.leaf {
+.advantages-leaf {
   background-image: url("../img/icon-svg/leaf.svg");
-  background-repeat: no-repeat;
-  background-size: auto auto;
 }
 
-.cow {
+.advantages-cow {
   background-image: url("../img/icon-svg/cow.svg");
-  background-repeat: no-repeat;
-  background-size: auto auto;
 }
 
-.thermometer {
+.advantages-thermometer {
   background-image: url("../img/icon-svg/thermometer.svg");
-  background-repeat: no-repeat;
-  background-size: auto auto;
 }
 
 /* article */
@@ -369,6 +374,15 @@ img {
 
 /* newsletter */
 .newsletter {
+  background: url("../img/mail-back.png");
+  border-radius: 16px;
+  width: 560px;
+  height: 220px;
+}
+
+.newsletter-wrapper {
+  width: 548px;
+  height: 210px;
   color: var(--black-form);
   /* ХЗ как сделать радиус */
   border-radius: 16px;
@@ -379,6 +393,10 @@ img {
 
 .newsletter-text {
   font-weight: 400;
+}
+
+.button-newsletter {
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
 /* contacts */
@@ -469,6 +487,10 @@ img {
   border-bottom: 1px solid #FFBC9E;
 }
 
+.catalog-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 /* feedback пока что вынес ниже header */
 .feedback-form {
   background: #F8F7F4;
@@ -524,14 +546,11 @@ img {
   padding: 0;
 }
 
-.catalog-breadcrumbs-item {
+.catalog-breadcrumbs-link {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-}
-
-.catalog-breadcrumbs-link {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .catalog-breadcrumbs-link:hover {
@@ -586,12 +605,33 @@ img {
 .filter-button:hover {
   background-color: var(--basic-white);
   color: var(--full-black);
+  border-radius: 20px;
+}
+
+.filter-button:active {
+  background-color: #EDEDED;
+  color: var(--full-black);
+  box-shadow: inset 0px 2px 1px #696969;
+  border-radius: 20px;
 }
 
 .catalog-list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.catalog-list h3 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.catalog-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .catalog-item-text {
@@ -604,7 +644,7 @@ img {
   line-height: 45px;
 }
 
-.catalog-item h3 {
+.catalog-item-link h3 {
   font-weight: 500;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -623,10 +663,28 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.pagination-item-link:not(.pagination-item-current):hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item-link:not(.pagination-item-current):active {
+  background: #FFFFFF;
+  color: var(--full-black);
 }
 
 .pagination-item-current a {
-  color: #323232;
+  background: #FFFFFF;
+  color: var(--full-black);
+  border: 50%;
+}
+
+.pagination-item-link-not {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(-180deg);
 }
 
 /* Аня пися */
@@ -637,10 +695,12 @@ img {
   height: 84px;
 }
 
-.search-label {
+.user-navigation-input {
   background: #FFFFFF;
   border: 1px solid #D3D3D2;
   border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .form-login {
@@ -654,12 +714,6 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: #999999;
-}
-
-.email-input {
-  background: #FFFFFF;
-  border: 1px solid #D3D3D2;
-  border-radius: 4px;
 }
 
 .form-login-link {
@@ -711,38 +765,25 @@ img {
   background-color: var(--basic-white);
 }
 
-.search-input::placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.search-input:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
-  outline: 0;
-}
-
-.search-input:valid {
-  font-weight: 700;
-  color: #323232;
-}
-
-.email-input::placeholder {
+.user-navigation-input::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #999999;
 }
 
-.email-input:focus {
+.user-navigation-input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
   outline: 0;
 }
 
-.email-input:valid {
+.user-navigation-input:valid {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
+  color: #323232;
+}
+
+.email-input:invalid {
+  font-weight: 700;
   color: #323232;
 }
 
@@ -756,6 +797,9 @@ img {
 }
 
 .newsletter-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   color: #999999;
 }
 
@@ -764,7 +808,8 @@ img {
   outline: 0;
 }
 
-.newsletter-input:valid {
+.newsletter-input:valid,
+.newsletter-input:invalid {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -784,35 +829,46 @@ img {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.feedback-login-input::placeholder {
+.feedback-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
   color: #999999;
 }
 
-.feedback-login-input:focus {
+.feedback-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #999999;
+}
+
+.feedback-input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
   outline: 0;
 }
 
-.feedback-login-input:valid {
+.feedback-input:valid {
   font-weight: 700;
   color: #323232;
 }
 
-.feedback-email-input::placeholder {
-  color: #999999;
-}
-
-.feedback-email-input:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
-  outline: 0;
-}
-
-.feedback-email-input:valid {
+.feedback-email-input:invalid {
   font-weight: 700;
   color: #323232;
 }
 
 .feedback-textarea {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #999999;
+}
+
+.feedback-textarea::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
   color: #999999;
 }
 
