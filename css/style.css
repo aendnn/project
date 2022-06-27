@@ -85,25 +85,24 @@ img {
   line-height: 18px;
 }
 
-.site-navigation-link:hover {
+.current-site-item:not(.catalog-navigation) .site-navigation-link {
+  background-color: var(--catalog-red);
+  color: var(--basic-white);
+  border-radius: 26px;
+}
+
+.site-navigation-item:not(.current-site-item) .site-navigation-link:hover {
   border-radius: 26px;
   color: var(--full-black);
   background-color: var(--basic-white);
   border-bottom: none;
 }
 
-.site-navigation-link:active {
+.site-navigation-item:not(.current-site-item) .site-navigation-link:active {
   background: #EDEDED;
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
   border-bottom: none;
-}
-
-.site-navigation-button {
-  background-color: var(--catalog-red);
-  color: var(--basic-white);
-  border-radius: 26px;
-  line-height: 18px;
 }
 
 .user-navigation-login-button {
@@ -138,22 +137,25 @@ img {
   border-radius: 4px;
 }
 
+.current-page-item {
+  background-color: #D07058;
+}
+
+.current-page-item .catalog-navigation-link {
+  color: var(--basic-white);
+}
+
 .catalog-navigation-link {
   color: var(--full-black);
   border-radius: 4px;
 }
 
-.catalog-navigation-link:not(.current-page):hover {
+.catalog-navigation-link:not(.current-page-item .catalog-navigation-link):hover {
   background: #FBDED7;
 }
 
-.catalog-navigation-link:not(.current-page):active {
+.catalog-navigation-link:not(.current-page-item .catalog-navigation-link):active {
   background: #F6B5A5;
-}
-
-.current-page {
-  background: #D07058;
-  color: var(--basic-white);
 }
 
 /* header/contacts */
@@ -889,13 +891,15 @@ li .slider-button {
   border-radius: 50%;
   background-color: #849D8F;
 }
-li .current-slider-button {
+
+.current-slider-item .slider-button {
   background-color: var(--basic-white);
 }
-li :not(.current-slider-button).slider-button:hover {
+
+.slider-item:not(.current-slider-item) .slider-button:hover {
   background: rgba(255, 255, 255, 0.4);
 }
 
-li :not(.current-slider-button).slider-button:active {
+.slider-item:not(.current-slider-item) .slider-button:active {
   background-color: var(--basic-white);
 }
