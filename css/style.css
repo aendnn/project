@@ -889,13 +889,13 @@ li .slider-button {
   border-radius: 50%;
   background-color: #849D8F;
 }
-
-li .slider-button:active {
+li .current-slider-button {
   background-color: var(--basic-white);
 }
-li .slider-button:hover {
+li :not(.current-slider-button).slider-button:hover {
   background: rgba(255, 255, 255, 0.4);
 }
-li .current-slider-button {
+
+li .slider-button:active {
   background-color: var(--basic-white);
 }
