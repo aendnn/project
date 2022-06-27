@@ -85,7 +85,7 @@ img {
   line-height: 18px;
 }
 
-.current-site-item:not(.catalog-navigation) .site-navigation-link {
+.current-site-item .site-navigation-link {
   background-color: var(--catalog-red);
   color: var(--basic-white);
   border-radius: 26px;
@@ -565,7 +565,7 @@ img {
   border-radius: 20px;
 }
 
-.filter-group h3 {
+.filter-group .filters-title {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -665,26 +665,28 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+}
+
+.pagination-item:not(.pagination-item-current) .pagination-item-link:hover {
+  background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 
-.pagination-item-link:not(.pagination-item-current):hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.pagination-item-link:not(.pagination-item-current):active {
+.pagination-item:not(.pagination-item-current) .pagination-item-link:active {
   background: #FFFFFF;
   color: var(--full-black);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
 }
 
 .pagination-item-current a {
   background: #FFFFFF;
   color: var(--full-black);
-  border: 50%;
+  border-radius: 50%;
 }
 
-.pagination-item-link-not {
+.pagination-item:first-child .pagination-item-link {
   background: rgba(255, 255, 255, 0.2);
   transform: rotate(-180deg);
 }
@@ -889,7 +891,7 @@ li .slider-button {
   height: 21px;
   border: 2px solid #FFFFFF;
   border-radius: 50%;
-  background-color: #849D8F;
+  background-color: transparent;
 }
 
 .current-slider-item .slider-button {

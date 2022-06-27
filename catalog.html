@@ -143,7 +143,7 @@
           <h2>Фильтр товаров</h2>
           <form action="https://echo.htmlacademy.ru/courses" method="POST">
             <fieldset class="filter-group">
-              <h3 class="filters-title">Сортировка:</h3>
+              <legend class="filters-title">Сортировка:</legend>
               <label>
                 <select class="filter-sorting" name="filter" id="filter">
                   <option selected value="по популярности">по популярности</option>
@@ -154,13 +154,13 @@
               </label>
             </fieldset>
             <fieldset class="filter-group">
-              <h3 class="price-title">Цена 100-500р</h3> <!-- хуй знает как сделать его. ну это не заголовок!! -->
+              <legend class="price-title">Цена 100-500р</legend> <!-- хуй знает как сделать его. ну это не заголовок!! -->
               <label>
                 <input type="range" min="50" max="1000" step="100" id="price" value="100">
               </label>
             </fieldset>
             <fieldset class="filter-group">
-              <h3 class="filters-title">Жирность:</h3>
+              <legend class="filters-title">Жирность:</legend>
               <label class="filter-fat" for="fat-1">0%</label>
               <input type="radio" name="fat" id="fat-1" value="0%">
               <label class="filter-fat" for="fat-2">до 10%</label>
@@ -171,7 +171,7 @@
               <input type="radio" name="fat" id="fat-4" value="30% +">
             </fieldset>
             <fieldset class="filter-group">
-              <h3 class="filters-title">Наполнители:</h3> <!-- Есть ли в чекбоксе какой-то валью? Value -->
+              <legend class="filters-title">Наполнители:</legend> <!-- Есть ли в чекбоксе какой-то валью? Value -->
               <label class="filter-extender" for="extender-1">шоколадные</label>
               <input type="checkbox" name="Choco" id="extender-1" checked>
               <label class="filter-extender" for="extender-2">сахарные присыпки</label>
@@ -310,7 +310,7 @@
         </ul>
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a class="pagination-item-link-not" href="#">
+            <a class="pagination-item-link" href="#">
               <</a>
           <li class="pagination-item pagination-item-current">
             <a>1</a>
