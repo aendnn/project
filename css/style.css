@@ -881,3 +881,21 @@ img {
   font-weight: 700;
   color: #323232;
 }
+
+li .slider-button {
+  width: 21px;
+  height: 21px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background-color: #849D8F;
+}
+
+li .slider-button:active {
+  background-color: var(--basic-white);
+}
+li .slider-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+li .current-slider-button {
+  background-color: var(--basic-white);
+}
