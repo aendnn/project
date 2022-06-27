@@ -896,6 +896,6 @@ li :not(.current-slider-button).slider-button:hover {
   background: rgba(255, 255, 255, 0.4);
 }
 
-li .slider-button:active {
+li :not(.current-slider-button).slider-button:active {
   background-color: var(--basic-white);
 }
