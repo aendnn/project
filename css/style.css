@@ -359,19 +359,17 @@ li .slider-button {
   font-size: 35px;
   line-height: 41px;
 }
-
-.promotions-item:nth-of-type(1) {
-  background-image: url("../img/malina-back.jpg");
+.promotions-item {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
 }
+.promotions-item:nth-of-type(1) {
+  background-image: url("../img/malina-back.jpg");
+}
 
 .promotions-item:nth-last-of-type(1) {
   background-image: url("../img/shocko-back.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 16px;
 }
 
 .promotions-item-text {
