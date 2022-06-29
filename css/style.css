@@ -54,7 +54,7 @@
 
 /* body основные/превуалирующие параметры */
 body {
-  min-width: 1200px;
+  width: 1200px;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -73,11 +73,51 @@ img {
   height: auto;
 }
 
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  /* выравнивает по верху */
+}
+
 /* header/site-navigation */
+.main-header {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.main-navigation {
+  display: grid;
+  grid-template-columns: 154px 1fr 112px;
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header-logo {
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+  width: 154px;
+}
+
 .site-navigation-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  outline: 5px solid rgba(255, 255, 0, 0.3);
+  outline-offset: -5px;
+  \
+ width: 112px;
+}
+
+.user-navigation {
+  outline: 5px solid rgba(255, 180, 0, 0.3);
+  outline-offset: -5px;
 }
 
 .site-navigation-link {
@@ -268,6 +308,16 @@ img {
 }
 
 /* header/contacts */
+.contacts {
+  display: grid;
+  justify-content: end;
+  width: 1146px;
+  outline: 5px solid rgba(155, 155, 0, 0.7);
+  outline-offset: -5px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .contacts-text {
   font-size: 14px;
   line-height: 16px;
@@ -280,6 +330,11 @@ img {
 }
 
 /* big-offers */
+.content {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+
 .big-offers {
   text-align: center;
 }
@@ -355,15 +410,23 @@ li .slider-button {
 }
 
 /* promotions */
+.promotions-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .promotions-item h3 {
   font-size: 35px;
   line-height: 41px;
 }
+
 .promotions-item {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  width: 560px;
 }
+
 .promotions-item:nth-of-type(1) {
   background-image: url("../img/malina-back.jpg");
 }
@@ -383,6 +446,13 @@ li .slider-button {
 /* hits */
 .hits-list {
   list-style: none;
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  column-gap: 26px;
+}
+
+.hits-item {
+  width: 267px;
 }
 
 .hits-item:hover {
@@ -433,6 +503,7 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  height: 306px;
 }
 
 .advantages h3 {
@@ -445,6 +516,10 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 485px 485px;
+  grid-template-rows: 77px 77px;
+  row-gap: 33px;
 }
 
 .advantages-item-text {
@@ -454,6 +529,8 @@ li .slider-button {
 .advantages-item {
   background-repeat: no-repeat;
   background-size: auto auto;
+  width: 485px;
+  height: 55px;
 }
 
 .advantages-ice-cream {
@@ -474,12 +551,20 @@ li .slider-button {
 }
 
 /* article */
+.news {
+  display: grid;
+  grid-template-columns: 560px 560px;
+  column-gap: 26px;
+}
+
+/* article */
 .article {
   color: var(--full-black);
   background-image: url("../img/strawberry-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  width: 560px;
 }
 
 .article-caption {
@@ -582,6 +667,11 @@ li .slider-button {
 }
 
 /* footer */
+.main-footer {
+  outline: 5px solid rgba(0, 0, 255, 0.7);
+  outline-offset: -5px;
+}
+
 .footer-social-list {
   list-style: none;
   margin: 0;
@@ -890,4 +980,8 @@ li .slider-button {
   background: rgba(255, 255, 255, 0.2);
   transform: rotate(-180deg);
   opacity: 0.2;
+}
+
+.visually-hidden {
+  visibility: hidden;
 }

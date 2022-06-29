@@ -44,7 +44,7 @@
           <div class="user-navigation-search">
             <h2>Поиск</h2>
             <a class="user-navigation-search-link" href="#"><img class="svg" src="img/icon-svg/lupa.svg" width="16" height="16" alt="Лупа поиска">Поиск</a>
-            <form class="form-search" action="https://echo.htmlacademy.ru/courses" method="POST">
+            <form class="form-search visually-hidden" action="https://echo.htmlacademy.ru/courses" method="POST">
               <label class="search-label" for="search">Поиск</label>
               <input class="user-navigation-input search-input" type="search" name="search" id="search" placeholder="Крем-брюле" required>
               <button class="search-button" type="submit">Найти</button>
@@ -53,7 +53,7 @@
           <div class="user-navigation-login">
             <h2>Личный кабинет</h2>
             <a class="user-navigation-login-link" href="#"><img class="svg" src="img/icon-svg/exit.svg" width="20" height="19" alt="Кнопка входа в личный кабинет">Вход</a>
-            <form class="form-login" action="https://echo.htmlacademy.ru/courses" method="POST">
+            <form class="form-login visually-hidden" action="https://echo.htmlacademy.ru/courses" method="POST">
               <p class="sign-block">
                 <label class="email-label" for="email">введите ваш emal</label>
                 <input class="user-navigation-input email-input" type="email" name="email" id="email" placeholder="email@example.com" required>
@@ -125,15 +125,17 @@
       </section>
       <section class="promotions">
         <h2>Акции и суперпредложения!</h2>
-        <div class="promotions-item">
-          <h3>Малинка даром!</h3>
-          <p class="promotions-item-text">При покупке 2 кг любого фруктового мороженого, добавим <br>в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="button promotions-item-link" href="catalog.html">Хочу варенье!</a> <!-- Мне кажется тут кнопка а не ссылка. Кнопка типа <button type="submit">Хочу варенье!</button> -->
-        </div>
-        <div class="promotions-item">
-          <h3>Шоколадки даром!</h3>
-          <p class="promotions-item-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку <br>вкуснейшей шоколадной присыпкт совершенно бесплатно.</p>
-          <a class="button promotions-item-link" href="catalog.html">Хочу шоколадки!</a> <!-- Мне кажется тут кнопка а не ссылка. Кнопка типа <button type="submit">Хочу шоколадки!</button> -->
+        <div class="promotions-wrapper">
+          <div class="promotions-item">
+            <h3>Малинка даром!</h3>
+            <p class="promotions-item-text">При покупке 2 кг любого фруктового мороженого, добавим <br>в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="button promotions-item-link" href="catalog.html">Хочу варенье!</a> <!-- Мне кажется тут кнопка а не ссылка. Кнопка типа <button type="submit">Хочу варенье!</button> -->
+          </div>
+          <div class="promotions-item">
+            <h3>Шоколадки даром!</h3>
+            <p class="promotions-item-text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку <br>вкуснейшей шоколадной присыпкт совершенно бесплатно.</p>
+            <a class="button promotions-item-link" href="catalog.html">Хочу шоколадки!</a> <!-- Мне кажется тут кнопка а не ссылка. Кнопка типа <button type="submit">Хочу шоколадки!</button> -->
+          </div>
         </div>
       </section>
       <section class="hits">
@@ -236,6 +238,25 @@
           <button class="button button-contacts" type="button">Форма обратной связи</button>
           <!-- Здесь будет форма обратной связи -->
         </div>
+        <section class="social-feedback">
+          <form class="feedback-form" action="https://echo.htmlacademy.ru/courses" method="POST">
+            <h2>Мы обязательно вам ответим!</h2>
+            <div>
+              <label class="feedback-login" for="username">Имя Фамилия</label>
+              <input class="feedback-input feedback-login-input" type="text" name="username" id="username" placeholder="Имя Фамилия" required>
+            </div>
+            <div>
+              <label class="feedback-email" for="feedback-email">Введите ваш email</label>
+              <input class="feedback-input feedback-email-input" type="email" name="email" id="feedback-email" placeholder="email@example.com" required>
+            </div>
+            <div>
+              <label class="feedback-letter" for="textarea-letter">В свободной форме</label>
+              <textarea class="feedback-textarea" name="feedback-textarea" id="textarea-letter" placeholder="В свободной форме" required></textarea>
+            </div>
+            <button class="button feedback-button" type="submit">Отправить</button>
+            <button class="feedback-button-close" type="button"><img class="svg" src="img/icon-svg/cross.svg" width="18" height="17" alt="Закрыть">Закрыть</button>
+          </form>
+        </section>
         <div class="map">
           <img class="map-png" src="img/map.png" width="1200" height="430" alt="Карта для поиска нашего магазина">
           <img class="marker-svg" src="img/icon-svg/marker.svg" width="80" height="140" alt="Маркер для карты">
@@ -288,25 +309,6 @@
           <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
           © 2022
         </p>
-      </section>
-      <section class="social-feedback">
-        <form class="feedback-form" action="https://echo.htmlacademy.ru/courses" method="POST">
-          <h2>Мы обязательно вам ответим!</h2>
-          <div>
-            <label class="feedback-login" for="username">Имя Фамилия</label>
-            <input class="feedback-input feedback-login-input" type="text" name="username" id="username" placeholder="Имя Фамилия" required>
-          </div>
-          <div>
-            <label class="feedback-email" for="feedback-email">Введите ваш email</label>
-            <input class="feedback-input feedback-email-input" type="email" name="email" id="feedback-email" placeholder="email@example.com" required>
-          </div>
-          <div>
-            <label class="feedback-letter" for="textarea-letter">В свободной форме</label>
-            <textarea class="feedback-textarea" name="feedback-textarea" id="textarea-letter" placeholder="В свободной форме" required></textarea>
-          </div>
-          <button class="button feedback-button" type="submit">Отправить</button>
-          <button class="feedback-button-close" type="button"><img class="svg" src="img/icon-svg/cross.svg" width="18" height="17" alt="Закрыть">Закрыть</button>
-        </form>
       </section>
     </footer>
   </div>
