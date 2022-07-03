@@ -111,8 +111,7 @@ img {
   padding: 0;
   outline: 5px solid rgba(255, 255, 0, 0.3);
   outline-offset: -5px;
-  \
- width: 112px;
+  width: 112px;
 }
 
 .user-navigation {
@@ -310,7 +309,7 @@ img {
 /* header/contacts */
 .contacts {
   display: grid;
-  justify-content: end;
+  justify-items: end;
   width: 1146px;
   outline: 5px solid rgba(155, 155, 0, 0.7);
   outline-offset: -5px;
@@ -322,6 +321,8 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: var(--basic-white);
+  width: 149px;
+  height: 16px;
 }
 
 .contacts-phone {
@@ -425,6 +426,7 @@ li .slider-button {
   background-size: cover;
   border-radius: 16px;
   width: 560px;
+  height: 229px;
 }
 
 .promotions-item:nth-of-type(1) {
@@ -672,16 +674,26 @@ li .slider-button {
   outline-offset: -5px;
 }
 
-.footer-social-list {
-  list-style: none;
+.container-footer {
+  display: flex;
+  width: 1146px;
   margin: 0;
   padding: 0;
+  justify-content: space-between;
+}
+
+.footer-social-list {
+  list-style: none;
+  width: 164px;
 }
 
 .footer-contacts-list {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  align-self: center;
+}
+
+.social-button a {
+  display: block;
 }
 
 .social-button {
@@ -721,6 +733,10 @@ li .slider-button {
 .heart {
   background-image: url("../img/icon-svg/heart.svg");
   background-repeat: no-repeat;
+}
+
+.footer-copyright {
+  align-self: flex-end;
 }
 
 .footer-copyright p {
@@ -833,6 +849,16 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  width: 224px;
+}
+
+.catalog-breadcrumbs-item {
+  margin-left: 22px;
+}
+
+.catalog-breadcrumbs-item:nth-child(1) {
+  margin-left: 0;
 }
 
 .catalog-breadcrumbs-link {
@@ -848,9 +874,47 @@ li .slider-button {
 }
 
 /* Фильтр каталога */
+.filter-container {
+  width: 869px;
+  display: grid;
+  row-gap: 14px;
+}
+
+.sortig-price-fat-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 15px;
+}
+
+.extender-button-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+}
+
 .filter-group {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+}
+
+.sortig-group {
+  width: 196px;
+  height: 56px;
+}
+
+.price-group {
+  width: 218px;
+  height: 56px;
+}
+
+.fat-group {
+  width: 425px;
+  height: 56px;
+}
+
+.extender-group {
+  width: 711px;
+  height: 60px;
 }
 
 .filter-group .filters-title {
@@ -875,12 +939,14 @@ li .slider-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  margin-left: 19px;
 }
 
 .filter-extender {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  margin-left: 54px;
 }
 
 .filter-button {
@@ -890,6 +956,9 @@ li .slider-button {
   color: var(--basic-white);
   border: 2px solid #FFFFFF;
   border-radius: 20px;
+  width: 144px;
+  height: 36px;
+  margin-top: 24px;
 }
 
 .filter-button:hover {
@@ -908,8 +977,12 @@ li .slider-button {
 /* Мороженки в разделе каталога */
 .catalog-list {
   list-style: none;
-  margin: 0;
+  margin: 27px;
   padding: 0;
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  column-gap: 26px;
+  row-gap: 40px;
 }
 
 .catalog-list h3 {
@@ -919,6 +992,10 @@ li .slider-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+}
+
+.catalog-item {
+  width: 267px;
 }
 
 .catalog-item:hover {
@@ -949,6 +1026,16 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 80px;
+  margin-right: 27px;
+}
+
+.pagination-item {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
 }
 
 .pagination-item-link {
@@ -983,5 +1070,14 @@ li .slider-button {
 }
 
 .visually-hidden {
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
