@@ -54,7 +54,7 @@
 
 /* body основные/превуалирующие параметры */
 body {
-  width: 1200px;
+  min-width: 1200px;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -71,6 +71,11 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h2, h3 {
+  margin: 0px;
+  padding: 0px;
 }
 
 .page {
@@ -91,12 +96,21 @@ img {
   outline-offset: -5px;
 }
 
-.main-navigation {
-  display: grid;
-  grid-template-columns: 154px 1fr 112px;
+.content-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.container-wrapper {
   width: 1146px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 27px;
+}
+
+.main-navigation {
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  width: 1146px;
 }
 
 .main-header-logo {
@@ -313,8 +327,6 @@ img {
   width: 1146px;
   outline: 5px solid rgba(155, 155, 0, 0.7);
   outline-offset: -5px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .contacts-text {
@@ -387,7 +399,10 @@ img {
 .slider-button-list {
   list-style: none;
   margin: 0;
+  margin-bottom: 41px;
   padding: 0;
+  display: flex;
+  align-items: flex-start;
 }
 
 li .slider-button {
@@ -396,6 +411,10 @@ li .slider-button {
   border: 2px solid #FFFFFF;
   border-radius: 50%;
   background-color: transparent;
+}
+
+.slider-item {
+  margin-right: 8px;
 }
 
 .current-slider-item .slider-button {
@@ -414,6 +433,7 @@ li .slider-button {
 .promotions-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
 }
 
 .promotions-item h3 {
@@ -447,9 +467,11 @@ li .slider-button {
 
 /* hits */
 .hits-list {
+  margin: 40px 0;
+  padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: min-content min-content min-content min-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 26px;
 }
 
@@ -505,13 +527,16 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  height: 306px;
 }
 
 .advantages h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  padding-left: 20px;
+  padding-right: 131px;
+  padding-top: 24px;
+  padding-bottom: 7px;
 }
 
 .advantages-list {
@@ -519,22 +544,36 @@ li .slider-button {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 485px 485px;
-  grid-template-rows: 77px 77px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 81px;
   row-gap: 33px;
 }
 
 .advantages-item-text {
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item {
   background-repeat: no-repeat;
   background-size: auto auto;
   width: 485px;
-  height: 55px;
 }
 
+.advantages-item:nth-child(2n-1) {
+  margin-left: 75px;
+}
+
+.advantages-item:nth-child(2n) {
+  margin-right: 23px;
+}
+
+.advantages-item:nth-child(3) {
+  margin-bottom: 36px;
+}
+
+/* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько */
 .advantages-ice-cream {
   background-image: url("../img/icon-svg/icecream.svg");
   /* Тестил  пнг но супер сильно ебется качество. думал за счёт примитивных цветов пнг может быть. хуй */
@@ -554,8 +593,10 @@ li .slider-button {
 
 /* article */
 .news {
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: grid;
-  grid-template-columns: 560px 560px;
+  grid-template-columns: 1fr 1fr;
   column-gap: 26px;
 }
 
@@ -596,12 +637,10 @@ li .slider-button {
   background: url("../img/mail-back.png");
   border-radius: 16px;
   width: 560px;
-  height: 220px;
 }
 
 .newsletter-wrapper {
   width: 548px;
-  height: 210px;
   color: var(--black-form);
   /* ХЗ как сделать радиус */
   border-radius: 16px;
@@ -668,6 +707,12 @@ li .slider-button {
   line-height: 24px;
 }
 
+/* map */
+.map {
+  width: 1200px;
+  margin-bottom: 18px;
+}
+
 /* footer */
 .main-footer {
   outline: 5px solid rgba(0, 0, 255, 0.7);
@@ -677,14 +722,12 @@ li .slider-button {
 .container-footer {
   display: flex;
   width: 1146px;
-  margin: 0;
-  padding: 0;
   justify-content: space-between;
 }
 
 .footer-social-list {
+  display: flex;
   list-style: none;
-  width: 164px;
 }
 
 .footer-contacts-list {
@@ -692,30 +735,31 @@ li .slider-button {
   align-self: center;
 }
 
-.social-button a {
-  display: block;
-}
-
 .social-button {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 19px auto;
+  display: flex;
 }
 
 .fb {
   background-image: url("../img/icon-svg/fb.svg");
+  display: block;
 }
 
 .vk {
   background-image: url("../img/icon-svg/vk.svg");
+  display: block;
 }
 
 .inst {
   background-image: url("../img/icon-svg/inst.svg");
+  display: block;
 }
 
 .tw {
   background-image: url("../img/icon-svg/twitter.svg");
+  display: block;
 }
 
 .footer-contacts-link {
@@ -876,45 +920,22 @@ li .slider-button {
 /* Фильтр каталога */
 .filter-container {
   width: 869px;
-  display: grid;
-  row-gap: 14px;
-}
-
-.sortig-price-fat-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 15px;
-}
-
-.extender-button-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-group {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+  margin-left: 15px;
 }
 
-.sortig-group {
-  width: 196px;
-  height: 56px;
+.filter-group:nth-child(1) {
+  margin-left: 0;
 }
 
-.price-group {
-  width: 218px;
-  height: 56px;
-}
-
-.fat-group {
-  width: 425px;
-  height: 56px;
-}
-
-.extender-group {
-  width: 711px;
-  height: 60px;
+.filter-group:nth-child(4) {
+  margin-left: 0;
 }
 
 .filter-group .filters-title {
@@ -929,6 +950,7 @@ li .slider-button {
   font-size: 16px;
   line-height: 18px;
   color: var(--blue-gray);
+  margin-left: 0;
 }
 
 .filter-sorting:hover {
@@ -939,14 +961,12 @@ li .slider-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  margin-left: 19px;
 }
 
 .filter-extender {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  margin-left: 54px;
 }
 
 .filter-button {
@@ -956,9 +976,7 @@ li .slider-button {
   color: var(--basic-white);
   border: 2px solid #FFFFFF;
   border-radius: 20px;
-  width: 144px;
-  height: 36px;
-  margin-top: 24px;
+  margin-left: 14px;
 }
 
 .filter-button:hover {
@@ -976,11 +994,11 @@ li .slider-button {
 
 /* Мороженки в разделе каталога */
 .catalog-list {
-  list-style: none;
-  margin: 27px;
+  margin: 40px 0;
   padding: 0;
+  list-style: none;
   display: grid;
-  grid-template-columns: min-content min-content min-content min-content;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 26px;
   row-gap: 40px;
 }
@@ -1036,7 +1054,6 @@ li .slider-button {
   margin-left: 20px;
   margin-bottom: 30px;
 }
-}
 
 .pagination-item-link {
   font-weight: 500;
@@ -1052,14 +1069,12 @@ li .slider-button {
 
 .pagination-item:not(.pagination-item-current, .disabled-item) .pagination-item-link:hover {
   background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 
 .pagination-item:not(.pagination-item-current, .disabled-item) .pagination-item-link:active {
   background: #FFFFFF;
   color: var(--full-black);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 
