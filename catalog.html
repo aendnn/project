@@ -9,7 +9,7 @@
 </head>
 
 <body class="page-body">
-  <div class="content-wrapper">
+  <div class="wrapper">
     <header class="main-header">
       <div class="container-wrapper">
         <nav class="main-navigation">
@@ -100,7 +100,7 @@
                       <a class="cart-item-link" href="blank.html"><img class="icecream-jpg" src="img/hits/hit3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></a>
                     </td>
                     <td class="cart-item-caption">
-                      <a class="cart-item-link" href="blank.html">Клубничный пломбир с присыпкой <br>из белого шоколада</a>
+                      <a class="cart-item-link" href="blank.html">Клубничный пломбир с присыпкой из белого шоколада</a>
                     </td>
                     <td class="cart-item-count">
                       <p class="cart-item-count-text">
@@ -146,20 +146,25 @@
             <form class="filter-container" action="https://echo.htmlacademy.ru/courses" method="POST">
               <fieldset class="filter-group sortig-group">
                 <legend class="filters-title">Сортировка:</legend>
-                <label>
-                  <select class="filter-sorting" name="filter" id="filter">
-                    <option selected value="по популярности">по популярности</option>
-                    <option value="сначала недорогие">сначала недорогие</option>
-                    <option value="сначала дорогие">сначала дорогие</option>
-                    <option value="по жирности">по жирности</option>
-                  </select>
-                </label>
+                <p>
+                  <label>
+                    <select class="filter-sorting" name="filter" id="filter">
+                      <option selected value="по популярности">по популярности</option>
+                      <option value="сначала недорогие">сначала недорогие</option>
+                      <option value="сначала дорогие">сначала дорогие</option>
+                      <option value="по жирности">по жирности</option>
+                    </select>
+                  </label>
+                </p>
               </fieldset>
               <fieldset class="filter-group price-group">
-                <legend class="price-title">Цена 100-500р</legend> <!-- хуй знает как сделать его. ну это не заголовок!! -->
-                <label>
-                  <input type="range" min="50" max="1000" step="100" id="price" value="100">
-                </label>
+                <legend class="price-title">Цена 100-500р</legend>
+                <p>
+                  <!-- хуй знает как сделать его. ну это не заголовок!! -->
+                  <label>
+                    <input type="range" min="50" max="1000" step="100" id="price" value="100">
+                  </label>
+                </p>
               </fieldset>
               <fieldset class="filter-group fat-group">
                 <legend class="filters-title">Жирность:</legend>
@@ -181,17 +186,27 @@
                 </p>
               </fieldset>
               <fieldset class="filter-group extender-group">
-                <legend class="filters-title">Наполнители:</legend> <!-- Есть ли в чекбоксе какой-то валью? Value -->
-                <label class="filter-extender" for="extender-1">шоколадные</label>
-                <input type="checkbox" name="Choco" id="extender-1" checked>
-                <label class="filter-extender" for="extender-2">сахарные присыпки</label>
-                <input type="checkbox" name="Sugar" id="extender-2" checked>
-                <label class="filter-extender" for="extender-3">фрукты</label>
-                <input type="checkbox" name="fruits" id="extender-3">
-                <label class="filter-extender" for="extender-4">сиропы</label>
-                <input type="checkbox" name="Sirop" id="extender-4">
-                <label class="filter-extender" for="extender-5">джемы</label>
-                <input type="checkbox" name="jam" id="extender-5">
+                <legend class="filters-title">Наполнители:</legend>
+                <p>
+                  <!-- Есть ли в чекбоксе какой-то валью? Value -->
+                  <label class="filter-extender" for="extender-1">шоколадные</label>
+                  <input type="checkbox" name="Choco" id="extender-1" checked>
+                </p>
+                <p>
+                  <label class="filter-extender" for="extender-2">сахарные присыпки</label>
+                  <input type="checkbox" name="Sugar" id="extender-2" checked>
+                </p>
+                <p>
+                  <label class="filter-extender" for="extender-3">фрукты</label>
+                  <input type="checkbox" name="fruits" id="extender-3">
+                </p>
+                <p>
+                  <label class="filter-extender" for="extender-4">сиропы</label>
+                  <input type="checkbox" name="Sirop" id="extender-4">
+                <p>
+                  <label class="filter-extender" for="extender-5">джемы</label>
+                  <input type="checkbox" name="jam" id="extender-5">
+                </p>
               </fieldset>
               <button class="filter-button" type="submit">Применить</button>
             </form>
@@ -346,52 +361,52 @@
     </main>
     <footer class="page-footer catalog-footer">
       <div class="container-wrapper container-footer">
-          <section class="footer-social">
-            <h2 class="visually-hidden">Мы в соцсетях</h2>
-            <ul class="footer-social-list">
-              <li class="footer-social-item">
-                <a class="social-button fb" href="#">Фейсбук</a>
-              </li>
-              <li class="footer-social-item">
-                <a class="social-button vk" href="#">Вконтакте</a>
-              </li>
-              <li class="footer-social-item">
-                <a class="social-button inst" href="#">Инстаграм</a>
-              </li>
-              <li class="footer-social-item">
-                <a class="social-button tw" href="#">Твиттер</a>
-              </li>
-            </ul>
-          </section>
-          <section class="footer-contacts">
-            <h2 class="visually-hidden">Информация о нас</h2>
-            <ul class="footer-contacts-list">
-              <li class="footer-contacts-item footer-contacts-item-left">
-                <a class="footer-contacts-link heart" href="#"><b>Для поставщиков</b></a>
-              </li>
-              <li class="footer-contacts-item footer-contacts-item-left">
-                <a class="footer-contacts-link" href="#">Наши документы</a>
-              </li>
-              <li class="footer-contacts-item footer-contacts-item-right">
-                <a class="footer-contacts-link" href="#">О производстве</a>
-              </li>
-              <li class="footer-contacts-item footer-contacts-item-right">
-                <a class="footer-contacts-link" href="#">Экологические стандарты</a>
-              </li>
-            </ul>
-          </section>
-          <section class="footer-copyright">
-            <h2 class="visually-hidden">HTML Academy</h2>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="img/icon-svg/footer-copyright.svg" width="154" height="64" alt="Логотип HTML Academy">
-            </a>
-            <p class="copyright-text">
-              Сделано в
-              <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-              © 2019
-            </p>
-          </section>
-        </div>
+        <section class="footer-social">
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="social-button fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-button vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-button inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
+            </li>
+            <li class="footer-social-item">
+              <a class="social-button tw" href="#"><span class="visually-hidden">Твиттер</span></a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Информация о нас</h2>
+          <ul class="footer-contacts-list">
+            <li class="footer-contacts-item footer-contacts-item-left">
+              <a class="footer-contacts-link heart" href="#"><b>Для поставщиков</b></a>
+            </li>
+            <li class="footer-contacts-item footer-contacts-item-left">
+              <a class="footer-contacts-link" href="#">Наши документы</a>
+            </li>
+            <li class="footer-contacts-item footer-contacts-item-right">
+              <a class="footer-contacts-link" href="#">О производстве</a>
+            </li>
+            <li class="footer-contacts-item footer-contacts-item-right">
+              <a class="footer-contacts-link" href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+        </section>
+        <section class="footer-copyright">
+          <h2 class="visually-hidden">HTML Academy</h2>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/icon-svg/footer-copyright.svg" width="154" height="64" alt="Логотип HTML Academy">
+          </a>
+          <p class="copyright-text">
+            Сделано в
+            <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            © 2019
+          </p>
+        </section>
+      </div>
     </footer>
   </div>
 </body>

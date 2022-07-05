@@ -96,8 +96,7 @@ h2, h3 {
   outline-offset: -5px;
 }
 
-.content-wrapper {
-  width: 1200px;
+.wrapper {
   margin: 0 auto;
 }
 
@@ -110,7 +109,6 @@ h2, h3 {
 .main-navigation {
   display: grid;
   grid-template-columns: min-content 1fr max-content;
-  width: 1146px;
 }
 
 .main-header-logo {
@@ -125,7 +123,6 @@ h2, h3 {
   padding: 0;
   outline: 5px solid rgba(255, 255, 0, 0.3);
   outline-offset: -5px;
-  width: 112px;
 }
 
 .user-navigation {
@@ -476,12 +473,8 @@ li .slider-button {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 267px);
   column-gap: 26px;
-}
-
-.hits-item {
-  width: 267px;
 }
 
 .hits-item:hover {
@@ -548,10 +541,10 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 81px;
-  row-gap: 33px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
 .advantages-item-text {
@@ -564,19 +557,13 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: auto auto;
   width: 485px;
-}
-
-.advantages-item:nth-child(2n-1) {
   margin-left: 75px;
+  margin-bottom: 26px;
 }
-
 .advantages-item:nth-child(2n) {
   margin-right: 23px;
 }
 
-.advantages-item:nth-child(3) {
-  margin-bottom: 36px;
-}
 
 /* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько */
 .advantages-ice-cream {
@@ -715,13 +702,14 @@ li .slider-button {
 /* map */
 .map {
   width: 1200px;
-  margin-bottom: 18px;
 }
 
 /* footer */
 .main-footer {
   outline: 5px solid rgba(0, 0, 255, 0.7);
   outline-offset: -5px;
+  padding-top: 18px;
+  padding-bottom: 25px;
 }
 
 .container-footer {
@@ -732,6 +720,8 @@ li .slider-button {
 }
 
 .footer-social-list {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
 }
@@ -745,15 +735,19 @@ li .slider-button {
   justify-content: flex-start;
   width: 327px;
 }
+
 .footer-contacts-item {
   min-width: 111px;
 }
+
 .footer-contacts-item {
   margin-right: 32px;
 }
+
 .footer-contacts-item:nth-child(2n) {
   margin-right: 0;
 }
+
 .social-button {
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -937,12 +931,22 @@ li .slider-button {
   width: 869px;
   display: flex;
   flex-wrap: wrap;
+  align-items: space-between;
 }
 
 .filter-group {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-group p {
+  margin: 0;
 }
 
 .filter-group:nth-child(1) {
@@ -991,7 +995,8 @@ li .slider-button {
   color: var(--basic-white);
   border: 2px solid #FFFFFF;
   border-radius: 20px;
-  margin-left: 14px;
+  margin-left: 15px;
+  padding: 20px;
 }
 
 .filter-button:hover {
@@ -1013,7 +1018,7 @@ li .slider-button {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 267px);
   column-gap: 26px;
   row-gap: 40px;
 }
@@ -1025,10 +1030,6 @@ li .slider-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-}
-
-.catalog-item {
-  width: 267px;
 }
 
 .catalog-item:hover {
