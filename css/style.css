@@ -360,6 +360,11 @@ h2, h3 {
   color: #FFBC9E;
 }
 
+.big-offers-slide:not(.current-slide) {
+  overflow: hidden;
+  height: 0;
+}
+
 .button {
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
@@ -723,6 +728,7 @@ li .slider-button {
   display: flex;
   width: 1146px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer-social-list {
@@ -732,34 +738,46 @@ li .slider-button {
 
 .footer-contacts-list {
   list-style: none;
-  align-self: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 327px;
 }
-
+.footer-contacts-item {
+  min-width: 111px;
+}
+.footer-contacts-item {
+  margin-right: 32px;
+}
+.footer-contacts-item:nth-child(2n) {
+  margin-right: 0;
+}
 .social-button {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 19px auto;
-  display: flex;
+  width: 32px;
+  height: 32px;
+  display: block;
+  align-self: center;
 }
 
 .fb {
   background-image: url("../img/icon-svg/fb.svg");
-  display: block;
 }
 
 .vk {
   background-image: url("../img/icon-svg/vk.svg");
-  display: block;
 }
 
 .inst {
   background-image: url("../img/icon-svg/inst.svg");
-  display: block;
 }
 
 .tw {
   background-image: url("../img/icon-svg/twitter.svg");
-  display: block;
 }
 
 .footer-contacts-link {
@@ -779,14 +797,11 @@ li .slider-button {
   background-repeat: no-repeat;
 }
 
-.footer-copyright {
-  align-self: flex-end;
-}
-
 .footer-copyright p {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  margin: 0;
 }
 
 .footer-copyright-link {
