@@ -73,11 +73,61 @@ img {
   height: auto;
 }
 
+h2, h3 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  /* выравнивает по верху */
+}
+
 /* header/site-navigation */
+.main-header {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.container-wrapper {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.main-navigation {
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+}
+
+.main-header-logo {
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+  width: 154px;
+}
+
 .site-navigation-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  outline: 5px solid rgba(255, 255, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.user-navigation {
+  outline: 5px solid rgba(255, 180, 0, 0.3);
+  outline-offset: -5px;
 }
 
 .site-navigation-link {
@@ -268,10 +318,20 @@ img {
 }
 
 /* header/contacts */
+.contacts {
+  display: grid;
+  justify-items: end;
+  width: 1146px;
+  outline: 5px solid rgba(155, 155, 0, 0.7);
+  outline-offset: -5px;
+}
+
 .contacts-text {
   font-size: 14px;
   line-height: 16px;
   color: var(--basic-white);
+  width: 149px;
+  height: 16px;
 }
 
 .contacts-phone {
@@ -280,6 +340,11 @@ img {
 }
 
 /* big-offers */
+.content {
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+
 .big-offers {
   text-align: center;
 }
@@ -290,6 +355,11 @@ img {
 
 .big-offers-link:hover {
   color: #FFBC9E;
+}
+
+.big-offers-slide:not(.current-slide) {
+  overflow: hidden;
+  height: 0;
 }
 
 .button {
@@ -331,7 +401,10 @@ img {
 .slider-button-list {
   list-style: none;
   margin: 0;
+  margin-bottom: 41px;
   padding: 0;
+  display: flex;
+  align-items: flex-start;
 }
 
 li .slider-button {
@@ -340,6 +413,10 @@ li .slider-button {
   border: 2px solid #FFFFFF;
   border-radius: 50%;
   background-color: transparent;
+}
+
+.slider-item {
+  margin-right: 8px;
 }
 
 .current-slider-item .slider-button {
@@ -355,15 +432,25 @@ li .slider-button {
 }
 
 /* promotions */
+.promotions-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+}
+
 .promotions-item h3 {
   font-size: 35px;
   line-height: 41px;
 }
+
 .promotions-item {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  width: 560px;
+  height: 229px;
 }
+
 .promotions-item:nth-of-type(1) {
   background-image: url("../img/malina-back.jpg");
 }
@@ -382,7 +469,12 @@ li .slider-button {
 
 /* hits */
 .hits-list {
+  margin: 40px 0;
+  padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 267px);
+  column-gap: 26px;
 }
 
 .hits-item:hover {
@@ -439,23 +531,41 @@ li .slider-button {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  padding-left: 20px;
+  padding-right: 131px;
+  padding-top: 24px;
+  padding-bottom: 7px;
 }
 
 .advantages-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
 .advantages-item-text {
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item {
   background-repeat: no-repeat;
   background-size: auto auto;
+  width: 485px;
+  margin-left: 75px;
+  margin-bottom: 26px;
+}
+.advantages-item:nth-child(2n) {
+  margin-right: 23px;
 }
 
+
+/* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько */
 .advantages-ice-cream {
   background-image: url("../img/icon-svg/icecream.svg");
   /* Тестил  пнг но супер сильно ебется качество. думал за счёт примитивных цветов пнг может быть. хуй */
@@ -474,12 +584,22 @@ li .slider-button {
 }
 
 /* article */
+.news {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+}
+
+/* article */
 .article {
   color: var(--full-black);
   background-image: url("../img/strawberry-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  width: 560px;
 }
 
 .article-caption {
@@ -509,12 +629,10 @@ li .slider-button {
   background: url("../img/mail-back.png");
   border-radius: 16px;
   width: 560px;
-  height: 220px;
 }
 
 .newsletter-wrapper {
   width: 548px;
-  height: 210px;
   color: var(--black-form);
   /* ХЗ как сделать радиус */
   border-radius: 16px;
@@ -581,23 +699,63 @@ li .slider-button {
   line-height: 24px;
 }
 
+/* map */
+.map {
+  width: 1200px;
+}
+
 /* footer */
+.main-footer {
+  outline: 5px solid rgba(0, 0, 255, 0.7);
+  outline-offset: -5px;
+  padding-top: 18px;
+  padding-bottom: 25px;
+}
+
+.container-footer {
+  display: flex;
+  width: 1146px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-social-list {
-  list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  list-style: none;
 }
 
 .footer-contacts-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 327px;
+}
+
+.footer-contacts-item {
+  min-width: 111px;
+}
+
+.footer-contacts-item {
+  margin-right: 32px;
+}
+
+.footer-contacts-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .social-button {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 19px auto;
+  width: 32px;
+  height: 32px;
+  display: block;
+  align-self: center;
 }
 
 .fb {
@@ -637,6 +795,7 @@ li .slider-button {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
+  margin: 0;
 }
 
 .footer-copyright-link {
@@ -743,6 +902,16 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  width: 224px;
+}
+
+.catalog-breadcrumbs-item {
+  margin-left: 22px;
+}
+
+.catalog-breadcrumbs-item:nth-child(1) {
+  margin-left: 0;
 }
 
 .catalog-breadcrumbs-link {
@@ -758,9 +927,33 @@ li .slider-button {
 }
 
 /* Фильтр каталога */
+.filter-container {
+  width: 869px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
 .filter-group {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-group p {
+  margin: 0;
+}
+
+.filter-group:nth-child(1) {
+  margin-left: 0;
+}
+
+.filter-group:nth-child(4) {
+  margin-left: 0;
 }
 
 .filter-group .filters-title {
@@ -775,6 +968,7 @@ li .slider-button {
   font-size: 16px;
   line-height: 18px;
   color: var(--blue-gray);
+  margin-left: 0;
 }
 
 .filter-sorting:hover {
@@ -791,6 +985,7 @@ li .slider-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  margin-bottom: 0;
 }
 
 .filter-button {
@@ -800,6 +995,9 @@ li .slider-button {
   color: var(--basic-white);
   border: 2px solid #FFFFFF;
   border-radius: 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+  padding: 0;
 }
 
 .filter-button:hover {
@@ -817,9 +1015,13 @@ li .slider-button {
 
 /* Мороженки в разделе каталога */
 .catalog-list {
-  list-style: none;
-  margin: 0;
+  margin: 40px 0;
   padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 267px);
+  column-gap: 26px;
+  row-gap: 40px;
 }
 
 .catalog-list h3 {
@@ -859,6 +1061,15 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 80px;
+  margin-right: 27px;
+}
+
+.pagination-item {
+  margin-left: 20px;
+  margin-bottom: 30px;
 }
 
 .pagination-item-link {
@@ -875,14 +1086,12 @@ li .slider-button {
 
 .pagination-item:not(.pagination-item-current, .disabled-item) .pagination-item-link:hover {
   background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 
 .pagination-item:not(.pagination-item-current, .disabled-item) .pagination-item-link:active {
   background: #FFFFFF;
   color: var(--full-black);
-  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
 }
 
@@ -890,4 +1099,17 @@ li .slider-button {
   background: rgba(255, 255, 255, 0.2);
   transform: rotate(-180deg);
   opacity: 0.2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
