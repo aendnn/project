@@ -84,9 +84,6 @@ h2, h3 {
 
 .page-body {
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
   /* выравнивает по верху */
 }
 
@@ -104,6 +101,9 @@ h2, h3 {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .main-navigation {
@@ -931,7 +931,7 @@ li .slider-button {
   width: 869px;
   display: flex;
   flex-wrap: wrap;
-  align-items: space-between;
+  align-items: flex-start;
 }
 
 .filter-group {
@@ -940,7 +940,6 @@ li .slider-button {
   margin-left: 15px;
   display: flex;
   flex-wrap: wrap;
-  align-items: space-between;
   padding-left: 10px;
   margin-bottom: 10px;
 }
@@ -986,6 +985,7 @@ li .slider-button {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
+  margin-bottom: 0;
 }
 
 .filter-button {
@@ -995,8 +995,9 @@ li .slider-button {
   color: var(--basic-white);
   border: 2px solid #FFFFFF;
   border-radius: 20px;
-  margin-left: 15px;
-  padding: 20px;
+  margin-left: 10px;
+  margin-top: 15px;
+  padding: 0;
 }
 
 .filter-button:hover {
