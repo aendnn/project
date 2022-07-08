@@ -95,15 +95,15 @@ h2, h3 {
 
 .wrapper {
   margin: 0 auto;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .container-wrapper {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
 }
 
 .main-navigation {
