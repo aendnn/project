@@ -118,6 +118,8 @@ h2, h3 {
 }
 
 .site-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -126,13 +128,19 @@ h2, h3 {
 }
 
 .user-navigation {
+  display: flex;
+  flex-wrap: wrap;
   outline: 5px solid rgba(255, 180, 0, 0.3);
   outline-offset: -5px;
+  padding-top: 30px;
 }
 
 .site-navigation-link {
+  display: block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   line-height: 18px;
+  padding: 9px 14px;
+  margin-top: 23px;
 }
 
 .current-site-item .site-navigation-link {
@@ -156,7 +164,14 @@ h2, h3 {
 }
 
 .user-navigation-search-link {
+  /* я хз, мне кажется лупа не по центру, я не понимаю как сделать, чтобы она была в центре кружка */
   background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .user-navigation-search-link:hover {
@@ -203,6 +218,11 @@ h2, h3 {
   color: var(--basic-white);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+  padding-right: 16px;
+  position: relative;
 }
 
 .user-navigation-login-link:hover {
@@ -248,6 +268,11 @@ h2, h3 {
   color: var(--basic-white);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+  padding-right: 16px;
 }
 
 .user-navigation-cart-link:hover {
@@ -286,6 +311,7 @@ h2, h3 {
 }
 
 .catalog-navigation-link {
+  display: block;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -363,6 +389,7 @@ h2, h3 {
 }
 
 .button {
+  display: inline-block;
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   font: inherit;
@@ -391,6 +418,7 @@ h2, h3 {
   line-height: 44px;
   letter-spacing: 0.05em;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 12px 23px;
 }
 
 .big-offers-item-text {
@@ -465,6 +493,7 @@ li .slider-button {
 
 .promotions-item-link {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 15px 22px;
 }
 
 /* hits */
@@ -516,6 +545,7 @@ li .slider-button {
 
 .button-quick-view {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 12px 16px;
 }
 
 /* advantages */
@@ -544,7 +574,6 @@ li .slider-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
 .advantages-item-text {
@@ -560,10 +589,10 @@ li .slider-button {
   margin-left: 75px;
   margin-bottom: 26px;
 }
+
 .advantages-item:nth-child(2n) {
   margin-right: 23px;
 }
-
 
 /* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько */
 .advantages-ice-cream {
@@ -698,7 +727,9 @@ li .slider-button {
   font-size: 18px;
   line-height: 24px;
 }
-
+.button-contacts {
+  padding: 13px 28px;
+}
 /* map */
 .map {
   width: 1200px;
@@ -723,7 +754,10 @@ li .slider-button {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  min-width: 179px;
+  justify-content: space-between;
 }
 
 .footer-contacts-list {
@@ -750,14 +784,17 @@ li .slider-button {
 
 .social-button {
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 19px auto;
   width: 32px;
   height: 32px;
   display: block;
   align-self: center;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius:50%;
 }
-
+.social-button:hover,
+.social-button:active {
+  opacity: 0.8;
+}
 .fb {
   background-image: url("../img/icon-svg/fb.svg");
 }
@@ -832,6 +869,7 @@ li .slider-button {
   font-size: 18px;
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 14px 24px;
 }
 
 .feedback-input {
@@ -1112,4 +1150,37 @@ li .slider-button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.svg-search {
+  position: absolute;
+  left: -6px;
+}
+
+.user-navigation-search-link:hover path {
+  fill: black;
+}
+
+.user-navigation-login-link svg {
+  position: absolute;
+  right: 55px;
+  top: 7px;
+}
+
+.user-navigation-login-link:hover path {
+  fill: black;
+}
+
+.user-navigation-cart-link:hover path {
+  fill: black;
+}
+
+.user-navigation-cart-link svg {
+  position: absolute;
+  right: 60px;
+  top: 5px;
+}
+
+.user-navigation a {
+  margin-left: 10px;
 }
