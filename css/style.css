@@ -727,9 +727,11 @@ li .slider-button {
   font-size: 18px;
   line-height: 24px;
 }
+
 .button-contacts {
   padding: 13px 28px;
 }
+
 /* map */
 .map {
   width: 1200px;
@@ -789,12 +791,14 @@ li .slider-button {
   display: block;
   align-self: center;
   border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius:50%;
+  border-radius: 50%;
 }
+
 .social-button:hover,
 .social-button:active {
   opacity: 0.8;
 }
+
 .fb {
   background-image: url("../img/icon-svg/fb.svg");
 }
@@ -1183,4 +1187,39 @@ li .slider-button {
 
 .user-navigation a {
   margin-left: 10px;
+}
+
+.promotions-item h3 {
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.promotions-item .promotions-item-text {
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.promotions-item:nth-of-type(1) .button {
+  margin-top: 22px;
+  margin-left: 374px;
+}
+.promotions-item:nth-last-of-type(1) .button {
+  margin-top: 22px;
+  margin-left: 347px;
+}
+.hits-item {
+  position: relative;
+}
+.hits-item:nth-of-type(1) .hits-item-price {
+  position: absolute;
+  top: 180px;
+}
+.hits-item:nth-of-type(1) h3 {
+  position: absolute;
+  top: 280px;
+}
+.hits-item:nth-of-type(1) .button-quick-view {
+  position: absolute;
+  top: 340px;
+  left: 30px;
 }
