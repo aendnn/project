@@ -519,8 +519,15 @@ li .slider-button {
 }
 
 .hits-item-text {
+  content: "";
+  width: 61px;
+  height: 61px;
+  background-repeat: no-repeat;
   background-image: url("../img/icon-svg/hit.svg");
+  background-position: center;
   position: absolute;
+  background-color: #FFFFFF;
+  border-radius: 50%;
 }
 
 /* также повторяется для айтемов каталога */
@@ -594,7 +601,8 @@ li .slider-button {
   margin-right: 23px;
 }
 
-/* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько */
+/* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько   margin-left: 75px;
+  margin-bottom: 26px;*/
 .advantages-ice-cream {
   background-image: url("../img/icon-svg/icecream.svg");
   /* Тестил  пнг но супер сильно ебется качество. думал за счёт примитивных цветов пнг может быть. хуй */
@@ -623,22 +631,30 @@ li .slider-button {
 
 /* article */
 .article {
+  display: block;
   color: var(--full-black);
   background-image: url("../img/strawberry-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
   width: 560px;
+  padding-top: 23px;
+  padding-left: 20px;
 }
 
 .article-caption {
   font-weight: 500;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .article-text-link {
+  width: 287px;
+  display: block;
   font-size: 24px;
   line-height: 30px;
   color: var(--full-black);
+  margin-bottom: 94px;
 }
 
 .article-text-link:hover {
@@ -655,12 +671,15 @@ li .slider-button {
 
 /* newsletter */
 .newsletter {
+  display: flex;
   background: url("../img/mail-back.png");
   border-radius: 16px;
   width: 560px;
+  padding: 5px;
 }
 
 .newsletter-wrapper {
+  margin: 0;
   width: 548px;
   color: var(--black-form);
   /* ХЗ как сделать радиус */
@@ -668,13 +687,20 @@ li .slider-button {
   background-color: #F8F7F4;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-left: 20px;
+  padding-top: 29px;
 }
 
 .newsletter-text {
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 47px;
 }
-
+.newsletter-form {
+  display: flex;
+}
 .newsletter-input {
+  width: 368px;
   background: #FFFFFF;
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 6px;
@@ -705,6 +731,7 @@ li .slider-button {
 
 .button-newsletter {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  margin-left: 10px;
 }
 
 /* contacts */
@@ -1189,37 +1216,47 @@ li .slider-button {
   margin-left: 10px;
 }
 
+.promotions-item {
+  padding-left: 16px;
+  padding-top: 16px;
+}
+
 .promotions-item h3 {
-  margin-top: 16px;
-  margin-left: 16px;
+  margin-bottom: 16px;
 }
 
 .promotions-item .promotions-item-text {
-  margin-top: 16px;
-  margin-left: 16px;
+  margin-bottom: 42px;
 }
 
 .promotions-item:nth-of-type(1) .button {
-  margin-top: 22px;
   margin-left: 374px;
 }
-.promotions-item:nth-last-of-type(1) .button {
-  margin-top: 22px;
+
+.promotions-item:nth-of-type(2) .button {
   margin-left: 347px;
 }
+
 .hits-item {
+  padding-top: 6px;
+  padding-bottom: 21px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.hits-item .button-quick-view {
+  margin-left: 20px;
+}
+
+.hits-item-content {
   position: relative;
 }
-.hits-item:nth-of-type(1) .hits-item-price {
-  position: absolute;
-  top: 180px;
+
+.hits-item-link {
+  text-align: center;
 }
-.hits-item:nth-of-type(1) h3 {
+
+.hits-item .hits-item-price {
   position: absolute;
-  top: 280px;
-}
-.hits-item:nth-of-type(1) .button-quick-view {
-  position: absolute;
-  top: 340px;
-  left: 30px;
+  top: 170px;
 }
