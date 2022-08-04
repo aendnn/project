@@ -475,8 +475,7 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  width: 560px;
-  height: 229px;
+  width: 522px;
 }
 
 .promotions-item:nth-of-type(1) {
@@ -502,8 +501,7 @@ li .slider-button {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 267px);
-  column-gap: 26px;
+  grid-template-columns: repeat(4, 293px);
 }
 
 .hits-item:hover {
@@ -562,16 +560,17 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  padding-top: 24px;
+  padding-bottom: 36px;
+  padding-left: 20px;
+  padding-right: 23px;
 }
 
 .advantages h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
-  padding-left: 20px;
-  padding-right: 131px;
-  padding-top: 24px;
-  padding-bottom: 7px;
+  margin-bottom: 21px;
 }
 
 .advantages-list {
@@ -581,43 +580,83 @@ li .slider-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
 }
 
 .advantages-item-text {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  margin-left: 60px;
 }
 
 .advantages-item {
   background-repeat: no-repeat;
   background-size: auto auto;
   width: 485px;
-  margin-left: 75px;
-  margin-bottom: 26px;
 }
 
 .advantages-item:nth-child(2n) {
-  margin-right: 23px;
+  margin-bottom: 33px;
+}
+
+.advantages-item:nth-child(2n-1) {
+  margin-right: 81px;
 }
 
 /* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько   margin-left: 75px;
   margin-bottom: 26px;*/
-.advantages-ice-cream {
+.advantages-ice-cream::before {
+  position: absolute;
+  bottom: 200px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/icecream.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
   /* Тестил  пнг но супер сильно ебется качество. думал за счёт примитивных цветов пнг может быть. хуй */
 }
 
-.advantages-leaf {
+.advantages-leaf::before {
+  position: absolute;
+  top: 105px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/leaf.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
 }
 
-.advantages-cow {
+.advantages-cow::before{
+  position: absolute;
+  bottom: 200px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/cow.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
 }
 
-.advantages-thermometer {
+.advantages-thermometer::before {
+  position: absolute;
+  top: 105px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/thermometer.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
 }
 
 /* article */
@@ -637,9 +676,10 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  width: 560px;
   padding-top: 23px;
   padding-left: 20px;
+  padding-bottom: 94px;
+  /*padding-right: 253px;*/
 }
 
 .article-caption {
@@ -649,12 +689,12 @@ li .slider-button {
 }
 
 .article-text-link {
-  width: 287px;
   display: block;
   font-size: 24px;
   line-height: 30px;
   color: var(--full-black);
-  margin-bottom: 94px;
+  width: 287px;
+  margin-right: 253px;
 }
 
 .article-text-link:hover {
@@ -674,13 +714,11 @@ li .slider-button {
   display: flex;
   background: url("../img/mail-back.png");
   border-radius: 16px;
-  width: 560px;
   padding: 5px;
 }
 
 .newsletter-wrapper {
   margin: 0;
-  width: 548px;
   color: var(--black-form);
   /* ХЗ как сделать радиус */
   border-radius: 16px;
@@ -696,9 +734,11 @@ li .slider-button {
   margin: 0;
   margin-bottom: 47px;
 }
+
 .newsletter-form {
   display: flex;
 }
+
 .newsletter-input {
   width: 368px;
   background: #FFFFFF;
@@ -707,6 +747,7 @@ li .slider-button {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  height: 50px;
 }
 
 .newsletter-input::placeholder {
@@ -732,6 +773,7 @@ li .slider-button {
 .button-newsletter {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   margin-left: 10px;
+  padding: 14px 19px;
 }
 
 /* contacts */
@@ -1219,6 +1261,8 @@ li .slider-button {
 .promotions-item {
   padding-left: 16px;
   padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
 }
 
 .promotions-item h3 {
@@ -1230,11 +1274,11 @@ li .slider-button {
 }
 
 .promotions-item:nth-of-type(1) .button {
-  margin-left: 374px;
+  margin-left: 358px;
 }
 
 .promotions-item:nth-of-type(2) .button {
-  margin-left: 347px;
+  margin-left: 331px;
 }
 
 .hits-item {
@@ -1244,8 +1288,12 @@ li .slider-button {
   padding-right: 13px;
 }
 
+.hits-item h3 {
+  margin-bottom: 14px;
+}
+
 .hits-item .button-quick-view {
-  margin-left: 20px;
+  margin-left: 33px;
 }
 
 .hits-item-content {
@@ -1258,5 +1306,5 @@ li .slider-button {
 
 .hits-item .hits-item-price {
   position: absolute;
-  top: 170px;
+  top: 180px;
 }
