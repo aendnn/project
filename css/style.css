@@ -167,7 +167,11 @@ h2, h3 {
   /* я хз, мне кажется лупа не по центру, я не понимаю как сделать, чтобы она была в центре кружка */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
 }
 
 .user-navigation-search-link:hover {
@@ -468,6 +472,8 @@ li .slider-button {
 }
 
 .promotions-item {
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
@@ -497,11 +503,8 @@ li .slider-button {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 293px);
-}
-
-.hits-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  grid-template-columns: repeat(4, 267px);
+  column-gap: 26px;
 }
 
 .hits-item-link h3 {
@@ -576,35 +579,32 @@ li .slider-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  position: relative;
 }
 
 .advantages-item-text {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  margin-left: 60px;
 }
 
 .advantages-item {
   background-repeat: no-repeat;
   background-size: auto auto;
   width: 485px;
+  position: relative;
+  padding-left: 60px;
 }
 
 .advantages-item:nth-child(2n) {
-margin-bottom: 33px;
-}
-
-.advantages-item:nth-child(2n-1) {
-  margin-right: 81px;
+  margin-bottom: 33px;
 }
 
 /* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько   margin-left: 75px;
   margin-bottom: 26px;*/
 .advantages-ice-cream::before {
   position: absolute;
-  bottom: 200px;
+  top: -20px;
+  left: 5px;
   content: "";
   width: 49px;
   height: 49px;
@@ -618,7 +618,8 @@ margin-bottom: 33px;
 
 .advantages-leaf::before {
   position: absolute;
-  top: 105px;
+  top: -20px;
+  left: 5px;
   content: "";
   width: 49px;
   height: 49px;
@@ -629,9 +630,10 @@ margin-bottom: 33px;
   border-radius: 50%;
 }
 
-.advantages-cow::before{
+.advantages-cow::before {
   position: absolute;
-  bottom: 200px;
+  top: -20px;
+  left: 5px;
   content: "";
   width: 49px;
   height: 49px;
@@ -644,7 +646,8 @@ margin-bottom: 33px;
 
 .advantages-thermometer::before {
   position: absolute;
-  top: 105px;
+  top: -20px;
+  left: 5px;
   content: "";
   width: 49px;
   height: 49px;
@@ -779,6 +782,9 @@ margin-bottom: 33px;
   background-color: #FEFEFE;
   width: 303px;
   border-radius: 16px;
+  position: absolute;
+  top: 55px;
+  right: 30px;
 }
 
 .main-contacts-phone {
@@ -791,22 +797,39 @@ margin-bottom: 33px;
   line-height: 20px;
   padding-top: 32px;
   padding-left: 25px;
-  margin-bottom: 8px;
+  margin-bottom: 31px;
 }
 
 .main-contacts-address b {
   font-size: 18px;
   line-height: 24px;
-  margin-top: 80px;
 }
 
 .button-contacts {
   padding: 13px 28px;
+  margin-left: 25px;
+  margin-bottom: 31px;
 }
 
 /* map */
 .map {
   width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.map .map-png {
+  display: block;
+}
+
+.map .iframe {
+  border: none;
+}
+
+.map .marker-svg {
+  position: absolute;
+  left: 200px;
+  top: 140px;
 }
 
 /* footer */
@@ -846,6 +869,7 @@ margin-bottom: 33px;
 
 .footer-contacts-item {
   min-width: 111px;
+  position: relative;
 }
 
 .footer-contacts-item {
@@ -866,25 +890,20 @@ margin-bottom: 33px;
   border-radius: 50%;
 }
 
-.social-button:hover,
+.social-button path {
+  fill: var(--basic-white);
+  fill-opacity: 0.8;
+}
+
+.social-button:hover path,
+/* Не совсем понимаю. Как менять это всё при наведении */
+.social-button:active path {
+  fill: var(--basic-white);
+  fill-opacity: 1;
+}
+
 .social-button:active {
-  opacity: 0.8;
-}
-
-.fb {
-  background-image: url("../img/icon-svg/fb.svg");
-}
-
-.vk {
-  background-image: url("../img/icon-svg/vk.svg");
-}
-
-.inst {
-  background-image: url("../img/icon-svg/inst.svg");
-}
-
-.tw {
-  background-image: url("../img/icon-svg/twitter.svg");
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 .footer-contacts-link {
@@ -899,9 +918,15 @@ margin-bottom: 33px;
   border-bottom: 1px solid #FFBC9E;
 }
 
-.heart {
+.heart::before  {
+  content: "";
+  position: absolute;
   background-image: url("../img/icon-svg/heart.svg");
   background-repeat: no-repeat;
+  width: 15px;
+  height: 13px;
+  top: 7px;
+  left: -20px;
 }
 
 .footer-copyright p {
@@ -925,12 +950,22 @@ margin-bottom: 33px;
 }
 
 /* feedback пока что вынес ниже header */
+.social-feedback {
+  position: relative;
+  /* Не понимаю как сделать тут крестик. не получается просто */
+}
+
 .feedback-form {
+  display: flex;
+  flex-direction: column;
   background: #F8F7F4;
   border-radius: 6px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  width: 453px;
+  padding-left: 23px;
+  padding-top: 20px;
 }
 
 .feedback-form h2 {
@@ -938,6 +973,7 @@ margin-bottom: 33px;
   font-size: 24px;
   line-height: 28px;
   color: #323232;
+  margin-bottom: 26px;
 }
 
 .feedback-button {
@@ -946,6 +982,39 @@ margin-bottom: 33px;
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   padding: 14px 24px;
+  margin-left: auto;
+  margin-right: 25px;
+  margin-bottom: 27px;
+}
+
+.feedback-button-close {
+  position: absolute;
+  top: 5px;
+  left: 450px;
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.feedback-button-close::before,
+.feedback-button-close::after {
+  content: "";
+  position: absolute;
+  background: #231F20;
+  width: 19px;
+  height: 2px;
+  top: 10px;
+  left: 2px;
+}
+
+.feedback-button-close::before {
+  transform: rotate(45deg);
+}
+
+.feedback-button-close::after {
+  transform: rotate(-45deg);
 }
 
 .feedback-input {
@@ -953,6 +1022,7 @@ margin-bottom: 33px;
   font-size: 16px;
   line-height: 20px;
   color: #999999;
+  margin-bottom: 20px;
 }
 
 .feedback-input::placeholder {
@@ -964,6 +1034,7 @@ margin-bottom: 33px;
 
 .feedback-input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
   outline: 0;
 }
 
@@ -982,6 +1053,10 @@ margin-bottom: 33px;
   font-size: 16px;
   line-height: 20px;
   color: #999999;
+  margin-bottom: 25px;
+  width: 428px;
+  height: 154px;
+  resize: none;
 }
 
 .feedback-textarea::placeholder {
@@ -993,6 +1068,7 @@ margin-bottom: 33px;
 
 .feedback-textarea:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
   outline: 0;
 }
 
@@ -1276,14 +1352,28 @@ margin-bottom: 33px;
 }
 
 .promotions-item:nth-of-type(1) .button {
-  margin-left: 358px;
+  margin-left: auto;
 }
 
 .promotions-item:nth-of-type(2) .button {
-  margin-left: 331px;
+  margin-left: auto;
 }
 
 .hits-item {
+  position: relative;
+}
+
+.hits-item::before {
+  content: "";
+  position: absolute;
+  top: -6;
+  left: -13;
+  width: 293px;
+  height: 402px;
+  background: #FFFFFF;
+  opacity: 0.2;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   padding-top: 6px;
   padding-bottom: 21px;
   padding-left: 13px;
@@ -1310,6 +1400,7 @@ margin-bottom: 33px;
   position: absolute;
   top: 180px;
 }
+
 .address {
   width: 303px;
 }
