@@ -71,6 +71,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  margin-top:10px;
 }
 
 h2, h3 {
@@ -118,21 +119,33 @@ h2, h3 {
 }
 
 .site-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
   outline: 5px solid rgba(255, 255, 0, 0.3);
   outline-offset: -5px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 .user-navigation {
+  display: flex;
+  flex-wrap: wrap;
   outline: 5px solid rgba(255, 180, 0, 0.3);
   outline-offset: -5px;
+  align-items: center;
 }
 
 .site-navigation-link {
+  display: inline-block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   line-height: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .current-site-item .site-navigation-link {
@@ -140,23 +153,32 @@ h2, h3 {
   color: var(--basic-white);
   border-radius: 26px;
 }
-
+.site-navigation-item:not(.site-navigation-item:nth-of-type(1)){
+  margin-left: 4px;
+}
 .site-navigation-item:not(.current-site-item) .site-navigation-link:hover {
   border-radius: 26px;
   color: var(--full-black);
   background-color: var(--basic-white);
-  border-bottom: none;
+  border-bottom-color:transparent;
 }
 
 .site-navigation-item:not(.current-site-item) .site-navigation-link:active {
   background: #EDEDED;
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
-  border-bottom: none;
+  border-bottom-color:transparent;
 }
 
 .user-navigation-search-link {
+  /* я хз, мне кажется лупа не по центру, я не понимаю как сделать, чтобы она была в центре кружка */
   background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
 }
 
 .user-navigation-search-link:hover {
@@ -203,6 +225,11 @@ h2, h3 {
   color: var(--basic-white);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+  padding-right: 16px;
+  position: relative;
 }
 
 .user-navigation-login-link:hover {
@@ -248,6 +275,11 @@ h2, h3 {
   color: var(--basic-white);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+  padding-right: 16px;
 }
 
 .user-navigation-cart-link:hover {
@@ -283,9 +315,11 @@ h2, h3 {
   padding: 0;
   background-color: var(--basic-white);
   border-radius: 4px;
+  position: absolute;
 }
 
 .catalog-navigation-link {
+  display: block;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -331,12 +365,13 @@ h2, h3 {
   line-height: 16px;
   color: var(--basic-white);
   width: 149px;
-  height: 16px;
+  margin-top: -4px;
 }
 
 .contacts-phone {
   font-size: 22px;
   line-height: 24px;
+  margin-top: -6px;
 }
 
 /* big-offers */
@@ -363,6 +398,7 @@ h2, h3 {
 }
 
 .button {
+  display: inline-block;
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   font: inherit;
@@ -391,6 +427,7 @@ h2, h3 {
   line-height: 44px;
   letter-spacing: 0.05em;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 12px 23px;
 }
 
 .big-offers-item-text {
@@ -444,11 +481,12 @@ li .slider-button {
 }
 
 .promotions-item {
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  width: 560px;
-  height: 229px;
+  width: 522px;
 }
 
 .promotions-item:nth-of-type(1) {
@@ -465,6 +503,7 @@ li .slider-button {
 
 .promotions-item-link {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 15px 22px;
 }
 
 /* hits */
@@ -477,10 +516,6 @@ li .slider-button {
   column-gap: 26px;
 }
 
-.hits-item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 .hits-item-link h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -490,8 +525,15 @@ li .slider-button {
 }
 
 .hits-item-text {
+  content: "";
+  width: 61px;
+  height: 61px;
+  background-repeat: no-repeat;
   background-image: url("../img/icon-svg/hit.svg");
+  background-position: center;
   position: absolute;
+  background-color: #FFFFFF;
+  border-radius: 50%;
 }
 
 /* также повторяется для айтемов каталога */
@@ -516,6 +558,7 @@ li .slider-button {
 
 .button-quick-view {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 12px 16px;
 }
 
 /* advantages */
@@ -525,16 +568,17 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
+  padding-top: 24px;
+  padding-bottom: 36px;
+  padding-left: 20px;
+  padding-right: 23px;
 }
 
 .advantages h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
-  padding-left: 20px;
-  padding-right: 131px;
-  padding-top: 24px;
-  padding-bottom: 7px;
+  margin-bottom: 21px;
 }
 
 .advantages-list {
@@ -544,7 +588,6 @@ li .slider-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
 
 .advantages-item-text {
@@ -557,30 +600,71 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: auto auto;
   width: 485px;
-  margin-left: 75px;
-  margin-bottom: 26px;
+  position: relative;
+  padding-left: 60px;
 }
+
 .advantages-item:nth-child(2n) {
-  margin-right: 23px;
+  margin-bottom: 33px;
 }
 
-
-/* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько */
-.advantages-ice-cream {
+/* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько   margin-left: 75px;
+  margin-bottom: 26px;*/
+.advantages-ice-cream::before {
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/icecream.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
   /* Тестил  пнг но супер сильно ебется качество. думал за счёт примитивных цветов пнг может быть. хуй */
 }
 
-.advantages-leaf {
+.advantages-leaf::before {
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/leaf.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
 }
 
-.advantages-cow {
+.advantages-cow::before {
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/cow.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
 }
 
-.advantages-thermometer {
+.advantages-thermometer::before {
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  content: "";
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url("../img/icon-svg/thermometer.svg");
+  border: 2px solid #323232;
+  border-radius: 50%;
 }
 
 /* article */
@@ -594,22 +678,30 @@ li .slider-button {
 
 /* article */
 .article {
+  display: block;
   color: var(--full-black);
   background-image: url("../img/strawberry-back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  width: 560px;
+  padding-top: 23px;
+  padding-left: 20px;
+  /*padding-right: 253px;*/
 }
 
 .article-caption {
   font-weight: 500;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .article-text-link {
+  display: block;
   font-size: 24px;
   line-height: 30px;
   color: var(--full-black);
+  width: 287px;
+  margin-right: 253px;
 }
 
 .article-text-link:hover {
@@ -626,32 +718,45 @@ li .slider-button {
 
 /* newsletter */
 .newsletter {
+  display: flex;
   background: url("../img/mail-back.png");
   border-radius: 16px;
-  width: 560px;
+  padding: 5px;
 }
 
 .newsletter-wrapper {
-  width: 548px;
+  margin: 0;
   color: var(--black-form);
   /* ХЗ как сделать радиус */
   border-radius: 16px;
   background-color: #F8F7F4;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-left: 20px;
+  padding-top: 29px;
+  padding-right: 16px;
 }
 
 .newsletter-text {
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.newsletter-form {
+  display: flex;
 }
 
 .newsletter-input {
+  width: 368px;
   background: #FFFFFF;
   border: 1px solid rgba(178, 178, 178, 0.52);
   border-radius: 6px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  height: 50px;
+  margin-bottom: 35px;
 }
 
 .newsletter-input::placeholder {
@@ -676,12 +781,19 @@ li .slider-button {
 
 .button-newsletter {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  margin-left: 10px;
+  padding: 14px 19px;
 }
 
 /* contacts */
 .main-contacts {
   color: var(--full-black);
   background-color: #FEFEFE;
+  width: 303px;
+  border-radius: 16px;
+  position: absolute;
+  top: 55px;
+  right: 30px;
 }
 
 .main-contacts-phone {
@@ -692,6 +804,9 @@ li .slider-button {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 32px;
+  padding-left: 25px;
+  margin-bottom: 31px;
 }
 
 .main-contacts-address b {
@@ -699,9 +814,31 @@ li .slider-button {
   line-height: 24px;
 }
 
+.button-contacts {
+  padding: 13px 28px;
+  margin-left: 25px;
+  margin-bottom: 31px;
+}
+
 /* map */
 .map {
   width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.map .map-png {
+  display: block;
+}
+
+.map .iframe {
+  border: none;
+}
+
+.map .marker-svg {
+  position: absolute;
+  left: 200px;
+  top: 140px;
 }
 
 /* footer */
@@ -723,7 +860,10 @@ li .slider-button {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  min-width: 179px;
+  justify-content: space-between;
 }
 
 .footer-contacts-list {
@@ -738,6 +878,7 @@ li .slider-button {
 
 .footer-contacts-item {
   min-width: 111px;
+  position: relative;
 }
 
 .footer-contacts-item {
@@ -750,28 +891,28 @@ li .slider-button {
 
 .social-button {
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 19px auto;
   width: 32px;
   height: 32px;
   display: block;
   align-self: center;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
 }
 
-.fb {
-  background-image: url("../img/icon-svg/fb.svg");
+.social-button path {
+  fill: var(--basic-white);
+  fill-opacity: 0.8;
 }
 
-.vk {
-  background-image: url("../img/icon-svg/vk.svg");
+.social-button:hover path,
+/* Не совсем понимаю. Как менять это всё при наведении */
+.social-button:active path {
+  fill: var(--basic-white);
+  fill-opacity: 1;
 }
 
-.inst {
-  background-image: url("../img/icon-svg/inst.svg");
-}
-
-.tw {
-  background-image: url("../img/icon-svg/twitter.svg");
+.social-button:active {
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 .footer-contacts-link {
@@ -786,9 +927,15 @@ li .slider-button {
   border-bottom: 1px solid #FFBC9E;
 }
 
-.heart {
+.heart::before  {
+  content: "";
+  position: absolute;
   background-image: url("../img/icon-svg/heart.svg");
   background-repeat: no-repeat;
+  width: 15px;
+  height: 13px;
+  top: 7px;
+  left: -20px;
 }
 
 .footer-copyright p {
@@ -812,12 +959,22 @@ li .slider-button {
 }
 
 /* feedback пока что вынес ниже header */
+.social-feedback {
+  position: relative;
+  /* Не понимаю как сделать тут крестик. не получается просто */
+}
+
 .feedback-form {
+  display: flex;
+  flex-direction: column;
   background: #F8F7F4;
   border-radius: 6px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  width: 453px;
+  padding-left: 23px;
+  padding-top: 20px;
 }
 
 .feedback-form h2 {
@@ -825,6 +982,7 @@ li .slider-button {
   font-size: 24px;
   line-height: 28px;
   color: #323232;
+  margin-bottom: 26px;
 }
 
 .feedback-button {
@@ -832,6 +990,40 @@ li .slider-button {
   font-size: 18px;
   line-height: 24px;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  padding: 14px 24px;
+  margin-left: auto;
+  margin-right: 25px;
+  margin-bottom: 27px;
+}
+
+.feedback-button-close {
+  position: absolute;
+  top: 5px;
+  left: 450px;
+  width: 18px;
+  height: 17px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.feedback-button-close::before,
+.feedback-button-close::after {
+  content: "";
+  position: absolute;
+  background: #231F20;
+  width: 19px;
+  height: 2px;
+  top: 10px;
+  left: 2px;
+}
+
+.feedback-button-close::before {
+  transform: rotate(45deg);
+}
+
+.feedback-button-close::after {
+  transform: rotate(-45deg);
 }
 
 .feedback-input {
@@ -839,6 +1031,7 @@ li .slider-button {
   font-size: 16px;
   line-height: 20px;
   color: #999999;
+  margin-bottom: 20px;
 }
 
 .feedback-input::placeholder {
@@ -850,6 +1043,7 @@ li .slider-button {
 
 .feedback-input:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
   outline: 0;
 }
 
@@ -868,6 +1062,10 @@ li .slider-button {
   font-size: 16px;
   line-height: 20px;
   color: #999999;
+  margin-bottom: 25px;
+  width: 428px;
+  height: 154px;
+  resize: none;
 }
 
 .feedback-textarea::placeholder {
@@ -879,6 +1077,7 @@ li .slider-button {
 
 .feedback-textarea:focus {
   border: 2px solid rgba(46, 136, 228, 0.52);
+  border-radius: 4px;
   outline: 0;
 }
 
@@ -1033,7 +1232,7 @@ li .slider-button {
   line-height: 22px;
 }
 
-.catalog-item:hover {
+.catalog-item-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -1112,4 +1311,105 @@ li .slider-button {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.svg-search {
+  position: absolute;
+}
+
+.user-navigation-search-link:hover path {
+  fill: black;
+}
+
+.user-navigation-login-link svg {
+  position: absolute;
+  right: 55px;
+  top: 7px;
+}
+
+.user-navigation-login-link:hover path {
+  fill: black;
+}
+
+.user-navigation-cart-link:hover path {
+  fill: black;
+}
+
+.user-navigation-cart-link svg {
+  position: absolute;
+  right: 60px;
+  top: 5px;
+}
+
+.user-navigation a {
+  margin-left: 11px;
+}
+
+.promotions-item {
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.promotions-item h3 {
+  margin-bottom: 16px;
+}
+
+.promotions-item .promotions-item-text {
+  margin-bottom: 42px;
+}
+
+.promotions-item:nth-of-type(1) .button {
+  margin-left: auto;
+}
+
+.promotions-item:nth-of-type(2) .button {
+  margin-left: auto;
+}
+
+.hits-item {
+  position: relative;
+}
+
+.hits-item::before {
+  content: "";
+  position: absolute;
+  top: -6;
+  left: -13;
+  width: 293px;
+  height: 402px;
+  background: #FFFFFF;
+  opacity: 0.2;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding-top: 6px;
+  padding-bottom: 21px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.hits-item h3 {
+  margin-bottom: 14px;
+}
+
+.hits-item .button-quick-view {
+  margin-left: 33px;
+}
+
+.hits-item-content {
+  position: relative;
+}
+
+.hits-item-link {
+  text-align: center;
+}
+
+.hits-item .hits-item-price {
+  position: absolute;
+  top: 180px;
+}
+
+.address {
+  width: 303px;
 }
