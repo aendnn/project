@@ -840,9 +840,10 @@ li .slider-button {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  padding-top: 32px;
-  padding-left: 25px;
-  margin-bottom: 31px;
+  padding-top: 24px;
+  padding-left: 28px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .main-contacts-address b {
@@ -851,9 +852,10 @@ li .slider-button {
 }
 
 .button-contacts {
-  padding: 13px 28px;
-  margin-left: 25px;
-  margin-bottom: 31px;
+  padding: 10px 28px;
+  margin-left: 29px;
+  margin-bottom: 33px;
+  margin-top: 9px;
 }
 
 /* map */
@@ -873,8 +875,8 @@ li .slider-button {
 
 .map .marker-svg {
   position: absolute;
-  left: 200px;
-  top: 140px;
+  left: 266px;
+  top: 127px;
 }
 
 /* footer */
@@ -892,11 +894,12 @@ li .slider-button {
 
 .footer-social-list {
   margin: 0;
-  padding: 0;
+  margin-bottom: 18px;
+  padding: 0px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  min-width: 179px;
+  min-width: 168px;
   justify-content: space-between;
 }
 
@@ -904,6 +907,9 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 6px;
+    padding-left: 47px;
+    padding-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -968,8 +974,8 @@ li .slider-button {
   background-repeat: no-repeat;
   width: 15px;
   height: 13px;
-  top: 7px;
-  left: -20px;
+  top: 6px;
+  left: -22px;
 }
 
 .footer-copyright p {
@@ -978,7 +984,10 @@ li .slider-button {
   line-height: 18px;
   margin: 0;
 }
-
+.footer-copyright {
+  margin-right: 1px;
+  margin-top: -34px;
+}
 .footer-copyright-link {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
