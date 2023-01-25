@@ -384,7 +384,9 @@ h2, h3 {
   margin-left: auto;
   margin-right: auto;
 }
-
+.big-offers-link {
+  display: block;
+}
 .big-offers-link:hover {
   color: #FFBC9E;
 }
@@ -426,7 +428,7 @@ h2, h3 {
   letter-spacing: 0.05em;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   padding: 9px 23px;
-  margin-left: -16px;
+  margin-right: 15px;
   margin-top: 26px;
 }
 
@@ -451,7 +453,9 @@ h2, h3 {
   margin-bottom: 41px;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
+  max-width: 261px;
 }
 
 li .slider-button {
@@ -510,6 +514,8 @@ li .slider-button {
 
 .promotions-item-text {
   font-size: 18px;
+  margin-bottom: 37px;
+  margin-top: 16px;
 }
 
 .promotions-item-link {
@@ -610,7 +616,7 @@ li .slider-button {
   list-style: none;
   margin: 0;
   padding-top: 16px;
-  padding-bottom: 25px;
+  padding-bottom: 3px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -630,12 +636,8 @@ li .slider-button {
   padding-left: 15px;
 }
 
-.advantages-leaf {
-  padding-top: 22px;
-}
-
-.advantages-thermometer {
-  padding-top: 22px;
+.advantages-item:nth-child(odd) {
+  margin-bottom: 22px;
 }
 
 /* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько   margin-left: 75px;
@@ -658,7 +660,7 @@ li .slider-button {
 .advantages-leaf::before {
   position: absolute;
   content: "";
-  top: 13px;
+  top: -9px;
   left: -41px;
   width: 45px;
   height: 45px;
@@ -686,7 +688,7 @@ li .slider-button {
 .advantages-thermometer::before {
   position: absolute;
   content: "";
-  top: 13px;
+  top: -9px;
   left: -39px;
   width: 45px;
   height: 45px;
@@ -714,15 +716,13 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 16px;
-  padding: 18px 8px;
-  /*padding-right: 253px;*/
+  padding: 18px 20px;
 }
 
 .article-caption {
   font-weight: 500;
   margin: 0;
-  padding-left: 12px;
-  padding-right: auto;
+  margin-bottom: 3px;
 }
 
 .article-text-link {
@@ -731,10 +731,6 @@ li .slider-button {
   line-height: 30px;
   color: var(--full-black);
   width: 287px;
-  margin-right: auto;
-  padding-left: 12px;
-  padding-top: 2px;
-  padding-bottom: auto;
 }
 
 .article-text-link:hover {
@@ -766,7 +762,7 @@ li .slider-button {
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 20px;
-  padding-top: 23px;
+  padding-top: 24px;
   padding-right: 16px;
   padding-bottom: 20px;
 }
@@ -789,9 +785,9 @@ li .slider-button {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin-top: 17px;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  margin-top: 16px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   padding-left: 13px;
   margin-bottom: 15px;
 }
@@ -819,8 +815,8 @@ li .slider-button {
 .button-newsletter {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   margin-top: 16px;
-  margin-left: 10px;
-  padding: 10px 19px;
+  margin-left: 9px;
+  padding: 10px 20px;
 }
 
 /* contacts */
@@ -1405,13 +1401,6 @@ li .slider-button {
   padding-bottom: 21px;
 }
 
-.promotions-item .promotions-item-text {
-  margin-bottom: 19px;
-  margin-top: 8px;
-  padding-bottom: 18px;
-  padding-top: 8px;
-}
-
 .promotions-item:nth-of-type(1) .button {
   margin-left: auto;
   margin-top: 5px;
@@ -1446,8 +1435,7 @@ li .slider-button {
 }
 
 .hits-item h3 {
-  padding-top: 7px;
-  width: 265px;
+  margin-top: 7px;
   margin-left: auto;
   margin-right: auto;
 }
