@@ -602,21 +602,20 @@ li .slider-button {
   background-image: url("../img/pattern.jpg");
   background-repeat: repeat;
   border-radius: 16px;
-  padding: 5px 20px;
+  padding: 24px 20px;
 }
 
 .advantages h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
-  padding-top: 19px;
 }
 
 .advantages-list {
   list-style: none;
   margin: 0;
   padding-top: 16px;
-  padding-bottom: 3px;
+  padding-bottom: 6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -634,10 +633,13 @@ li .slider-button {
   width: 485px;
   position: relative;
   padding-left: 15px;
-}
-
-.advantages-item:nth-child(odd) {
   margin-bottom: 22px;
+}
+.advantages-item:nth-last-child(1) {
+   margin-bottom: 0px;
+}
+.advantages-item:nth-last-child(2) {
+   margin-bottom: 0px;
 }
 
 /* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько   margin-left: 75px;
@@ -858,8 +860,10 @@ li .slider-button {
 
 /* map */
 .map {
-  width: 1200px;
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
 }
 
@@ -873,8 +877,8 @@ li .slider-button {
 
 .map .marker-svg {
   position: absolute;
-  left: 266px;
-  top: 127px;
+  right: auto;
+  top: 71px;
 }
 
 /* footer */
