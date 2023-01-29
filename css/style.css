@@ -800,6 +800,7 @@ li .slider-button {
   background-color: #FEFEFE;
   width: 303px;
   border-radius: 16px;
+  margin-left: auto;
 }
 
 .main-contacts-phone {
@@ -829,16 +830,12 @@ li .slider-button {
 .map {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  min-height: 430px;
   margin: 0 auto;
 }
 
-.map .map-png {
-  display: block;
-}
-
 .map .iframe {
+  position: absolute;
   border: none;
 }
 
@@ -848,14 +845,7 @@ li .slider-button {
   top: 71px;
 }
 
-.contacts-wrapper {
-  position: absolute;
-  left: 870px;
-  top: 1948px;
-}
-
 .address {
-  position: relative;
   margin: 29px 25px;
 }
 
