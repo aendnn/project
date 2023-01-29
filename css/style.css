@@ -796,6 +796,8 @@ li .slider-button {
 
 /* contacts */
 .main-contacts {
+  position: relative;
+  z-index: 1;
   color: var(--full-black);
   background-color: #FEFEFE;
   width: 303px;
@@ -829,14 +831,15 @@ li .slider-button {
 /* map */
 .map {
   position: relative;
-  width: 100%;
   min-height: 430px;
-  margin: 0 auto;
 }
 
-.map .iframe {
+.map iframe {
   position: absolute;
   border: none;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 
 .map .marker-svg {
