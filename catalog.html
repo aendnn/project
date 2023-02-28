@@ -18,7 +18,7 @@
             <img src="img/icon-svg/logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженого «Gllacy Shop»">
           </a>
           <ul class="site-navigation-list">
-            <li class="site-navigation-item current-site-item"><a class="site-navigation-link" href="catalog.html">Каталог</a>
+            <li class="site-navigation-item"><a class="site-navigation-link all-catalog" href="catalog.html"><span class="site-navigation-text">Каталог</span></a>
               <ul class="catalog-navigation visually-hidden">
                 <li class="catalog-navigation-item">
                   <a class="catalog-navigation-link" href="catalog.html">
@@ -86,7 +86,7 @@
                   <path d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" fill="white" />
                   <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white" />
                 </svg>
-                2 Товара</a>
+                2 товара</a>
               <div class="cart-content visually-hidden">
                 <table class="cart-content-table">
                   <tr class="cart-item">
@@ -174,13 +174,13 @@
                 </p>
               </fieldset>
               <fieldset class="filter-group price-group">
-                <legend class="price-title">Цена 100-500р</legend>
-                <p>
-                  <!-- хуй знает как сделать его. нуц это не заголовок!! -->
-                  <label>
-                    <input type="range" min="50" max="1000" step="100" id="price" value="100">
-                  </label>
-                </p>
+                <legend class="filters-title">Цена 100-500р</legend>
+                <div class="range">
+                  <div class="range-line">
+                    <span class="range-toggle"></span>
+                    <span class="range-toggle"></span>
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="filter-group fat-group">
                 <legend class="filters-title">Жирность:</legend>
