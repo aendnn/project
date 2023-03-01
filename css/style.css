@@ -354,7 +354,7 @@ h2, h3 {
 .contacts {
   display: grid;
   justify-items: end;
-  float:right;
+  margin-left:auto;
 }
 
 .contacts-text {
