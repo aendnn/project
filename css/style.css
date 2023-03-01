@@ -351,7 +351,7 @@ h2, h3 {
 .contacts {
   display: grid;
   justify-items: end;
-  width: 1146px;
+  float:right;
 }
 
 .contacts-text {
@@ -1116,6 +1116,7 @@ li .slider-button {
 
 /* catalog. всё после хедера ( контент и клебные крошки) */
 .catalog-content {
+  z-index: 2;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1130,6 +1131,7 @@ li .slider-button {
 }
 
 .catalog-breadcrumbs-list {
+  z-index: 1;
   list-style: none;
   margin: 0;
   padding: 0;
