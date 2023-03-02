@@ -50,6 +50,7 @@
   --lightest-pink: #FBDED7;
   --catalog-red: #D07058;
   --light-pink: #F6B5A5;
+  --blue: #1E90FF;
 }
 
 /* body основные/превуалирующие параметры */
@@ -354,7 +355,7 @@ h2, h3 {
 .contacts {
   display: grid;
   justify-items: end;
-  margin-left:auto;
+  margin-left: auto;
 }
 
 .contacts-text {
@@ -1196,14 +1197,63 @@ li .slider-button {
 }
 
 .sortig-group {
+  position: relative;
   padding-right: 53px;
 }
+
+.custom-select-opener {
+  position: relative;
+}
+
+.custom-select-opener::after {
+  content: '';
+  position: absolute;
+  left: 155px;
+  top: 6px;
+  border: 6px solid transparent;
+  border-top: 9px solid #fff;
+}
+
+.custom-select-opener:hover {
+  color: var(--full-black);
+}
+
+.custom-select-panel {
+  position: absolute;
+  width: 196px;
+  left: -15px;
+  top: 30px;
+}
+
+.custom-select-option {
+  padding-left: 20px;
+  background-color: var(--basic-white);
+  color: var(--full-black);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  padding-left: 20px;
+  padding-top: 9px;
+  padding-bottom: 3px;
+}
+
+.custom-select-option.has-focus {
+  background-color: var(--blue);
+  color: var(--basic-white);
+}
+
+.custom-select-option.is-selected::before {
+  content: "";
+  padding: 0;
+}
+
 .range-line {
   position: relative;
   background-color: var(--white-beige);
   height: 2px;
   width: 176px;
 }
+
 .filter-group p {
   margin: 0;
 }
