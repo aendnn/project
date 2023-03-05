@@ -1211,6 +1211,7 @@ li .slider-button {
   position: absolute;
   left: 155px;
   top: 50%;
+  transform: translateY(-50%);
   border: 6px solid transparent;
   border-top: 10px solid #fff;
 }
@@ -1223,7 +1224,6 @@ li .slider-button {
   border: 6px solid transparent;
   border-top: 10px solid var(--full-black);
   transform: rotate(180deg);
-  transform: translateY(-50%);
 }
 .custom-select-panel {
   position: absolute;
