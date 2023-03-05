@@ -1191,14 +1191,15 @@ li .slider-button {
   border: none;
   margin-bottom: 28px;
   margin-top: 10px;
-  padding: 7px 15px;
+  padding: 7px 16px;
   position: relative;
   min-height: 22px;
 }
 
 .sortig-group {
   position: relative;
-  padding-right: 53px;
+  width: 196px;
+  box-sizing: border-box;
 }
 
 .custom-select-opener {
@@ -1209,15 +1210,21 @@ li .slider-button {
   content: '';
   position: absolute;
   left: 155px;
-  top: 6px;
+  top: 50%;
   border: 6px solid transparent;
-  border-top: 9px solid #fff;
+  border-top: 10px solid #fff;
 }
 
 .custom-select-opener:hover {
   color: var(--full-black);
 }
-
+.custom-select-opener:hover::after {
+  border-color: var(--full-black);
+  border: 6px solid transparent;
+  border-top: 10px solid var(--full-black);
+  transform: rotate(180deg);
+  transform: translateY(-50%);
+}
 .custom-select-panel {
   position: absolute;
   width: 196px;
