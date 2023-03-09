@@ -1255,16 +1255,24 @@ li .slider-button {
   width: 218px;
 }
 
-.range-line {
+.range {
+  min-height: 20px;
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.range-line {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-color: var(--white-beige);
   height: 2px;
   width: 176px;
-  margin-top: 9px;
-  margin-left: 5px;
 }
 
 .range-toggle {
@@ -1276,12 +1284,12 @@ li .slider-button {
 }
 
 .toggle-left {
-  top: -9px;
+  position: absolute;
   left: 13px;
 }
 
 .toggle-right {
-  top: -9px;
+  position: absolute;
   right: 45px;
 }
 
