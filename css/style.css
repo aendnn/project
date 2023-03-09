@@ -1277,9 +1277,10 @@ li .slider-button {
 
 .range-toggle {
   content: "";
-  width: 16px;
-  height: 16px;
-  border: 2px solid #fff;
+  width: 4px;
+  height: 4px;
+  border: 8px solid #fff;
+  background-color: #ABABAB;
   border-radius: 50%;
 }
 
@@ -1311,6 +1312,40 @@ li .slider-button {
   line-height: 16px;
   position: absolute;
   top: -22px;
+}
+
+.price-group {
+  position: relative;
+}
+
+.min-price {
+  position: relative;
+}
+
+.min-price::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon-svg/price-catalog.svg);
+  background-position: center;
+  padding-left: 4px;
+}
+
+.max-price {
+  position: relative;
+  padding-left: 16px;
+}
+.max-price::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon-svg/price-catalog.svg);
+  background-position: center;
+  padding-left: 4px;
 }
 
 .custom-select-opener {
