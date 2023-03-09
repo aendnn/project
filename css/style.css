@@ -1329,14 +1329,16 @@ li .slider-button {
   height: 13px;
   background-repeat: no-repeat;
   background-image: url(../img/icon-svg/price-catalog.svg);
-  background-position: center;
   padding-left: 4px;
+  top: 3px;
+  left: 27px;
 }
 
 .max-price {
   position: relative;
   padding-left: 16px;
 }
+
 .max-price::after {
   position: absolute;
   content: "";
@@ -1344,8 +1346,9 @@ li .slider-button {
   height: 13px;
   background-repeat: no-repeat;
   background-image: url(../img/icon-svg/price-catalog.svg);
-  background-position: center;
   padding-left: 4px;
+  top: 3px;
+  left: 56px;
 }
 
 .custom-select-opener {
