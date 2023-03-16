@@ -1360,12 +1360,8 @@ li .slider-button {
 .fat-group {
   width: 425px;
   margin-right: 0;
-  padding: 6px 9px;
 }
 
-.fat-group .filters-title {
-  padding-left: 7px;
-}
 
 .custom-radio {
   position: relative;
@@ -1380,8 +1376,8 @@ li .slider-button {
 }
 
 .custom-radio::before {
-  position: absolute;
   content: "";
+  position: absolute;
   display: inline-block;
   width: 7.92px;
   height: 7.92px;
@@ -1393,10 +1389,12 @@ li .slider-button {
   opacity: 0;
 }
 
-.real-radio:checked+.filter-fat .custom-radio::before {
+.real-radio:checked + .filter-fat .custom-radio::before {
   opacity: 1;
 }
-
+.filter-fat:not(:first-child) {
+  margin-left: 11px;
+}
 /* скрыл для пробы
 .fat-group {
   position:relative;
@@ -1464,8 +1462,8 @@ li .slider-button {
 }
 
 .filter-extender::before {
-  position: absolute;
   content: '';
+  position: absolute;
   background-image: url("../img/icon-svg/checkbox-off.svg");
   width: 20px;
   height: 20px;
@@ -1476,6 +1474,7 @@ li .slider-button {
   background-image: url("../img/icon-svg/checkbox-on.svg");
   width: 24px;
   height: 20px;
+  transition: 0.2s;
 }
 
 .filter-button {
