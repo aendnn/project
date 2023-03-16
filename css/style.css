@@ -1191,7 +1191,8 @@ li .slider-button {
   border: none;
   margin-bottom: 28px;
   margin-top: 10px;
-  margin-left: 13px;
+  margin-left: 15px;
+  margin-right: 0;
   padding: 7px 16px;
   position: relative;
   min-height: 36px;
@@ -1286,12 +1287,12 @@ li .slider-button {
 
 .toggle-left {
   position: absolute;
-  left: 13px;
+  left: 7.5%;
 }
 
 .toggle-right {
   position: absolute;
-  right: 45px;
+  right: 25.5%;
 }
 
 .filter-group p {
@@ -1354,6 +1355,86 @@ li .slider-button {
 .custom-select-opener {
   padding: 0;
   background-color: transparent;
+}
+
+.fat-group {
+  width: 425px;
+  margin-right: 0;
+  padding: 6px 9px;
+}
+
+.fat-group .filters-title {
+  padding-left: 7px;
+}
+
+
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  vertical-align: text-top;
+  margin-right: 11px;
+}
+
+
+.custom-radio::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 7.92px;
+  height: 7.92px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+}
+
+.real-radio:checked + .custom-radio::before {
+  display: inline-block;
+  background-color: blue;
+}
+/* скрыл для пробы
+.fat-group {
+  position:relative;
+}
+
+.filter-fat {
+  padding-left: 11px;
+}
+
+.filter-fat::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  vertical-align: text-top;
+  margin-right: 11px;
+}
+.filter-fat::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 7.92px;
+  height: 7.92px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
+.extender-group {
+  width: 711px;
 }
 
 .filter-sorting {
