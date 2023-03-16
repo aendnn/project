@@ -1367,7 +1367,6 @@ li .slider-button {
   padding-left: 7px;
 }
 
-
 .custom-radio {
   position: relative;
   display: inline-block;
@@ -1380,7 +1379,6 @@ li .slider-button {
   margin-right: 11px;
 }
 
-
 .custom-radio::before {
   position: absolute;
   content: "";
@@ -1392,13 +1390,13 @@ li .slider-button {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: red;
+  opacity: 0;
 }
 
-.real-radio:checked + .custom-radio::before {
-  display: inline-block;
-  background-color: blue;
+.real-radio:checked+.filter-fat .custom-radio::before {
+  opacity: 1;
 }
+
 /* скрыл для пробы
 .fat-group {
   position:relative;
@@ -1457,10 +1455,27 @@ li .slider-button {
 }
 
 .filter-extender {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   margin-bottom: 0;
+  padding-left: 48px;
+}
+
+.filter-extender::before {
+  position: absolute;
+  content: '';
+  background-image: url("../img/icon-svg/checkbox-off.svg");
+  width: 20px;
+  height: 20px;
+  left: 10px;
+}
+
+.real-checkbox:checked+.filter-extender::before {
+  background-image: url("../img/icon-svg/checkbox-on.svg");
+  width: 24px;
+  height: 20px;
 }
 
 .filter-button {
@@ -1470,9 +1485,9 @@ li .slider-button {
   color: var(--basic-white);
   border: 2px solid #FFFFFF;
   border-radius: 20px;
-  margin-left: 10px;
-  margin-top: 15px;
-  padding: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  padding: 7px 26px;
 }
 
 .filter-button:hover {
