@@ -1193,7 +1193,7 @@ li .slider-button {
   margin-top: 10px;
   margin-left: 15px;
   margin-right: 0;
-  padding: 6px 16px;
+  padding: 7px 16px;
   position: relative;
   min-height: 36px;
   box-sizing: border-box;
@@ -1271,9 +1271,20 @@ li .slider-button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: var(--white-beige);
+  background-color: rgba(248, 247, 244, 0.5);
   height: 2px;
   width: 176px;
+}
+.range-line-filter {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 2px;
+  background-color: var(--white-beige);
+  left: 19%;
 }
 
 .range-toggle {
@@ -1283,6 +1294,7 @@ li .slider-button {
   border: 8px solid #fff;
   background-color: #ABABAB;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .toggle-left {
@@ -1364,32 +1376,34 @@ li .slider-button {
 
 .custom-radio {
   position: relative;
-  display: inline-block;
   width: 16px;
   height: 16px;
-  background: rgba(255, 255, 255, 0.2);
   border: 3px solid rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  vertical-align: sub;
   margin-right: 11px;
 }
-
+.custom-radio:hover{
+  border-color: var(--basic-white);
+}
 .custom-radio::before {
   content: "";
   position: absolute;
-  display: inline-block;
   width: 7.92px;
   height: 7.92px;
-  background: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-repeat: no-repeat;
   border-radius: 50%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
 }
-
-.real-radio:checked+.filter-fat .custom-radio::before {
+.custom-radio:hover::before {
+  background-color: var(--basic-white);
+}
+.real-radio:checked + .filter-fat .custom-radio::before {
   opacity: 1;
+  background-repeat: no-repeat;
 }
 
 .filter-fat:not:first-child {
@@ -1452,6 +1466,8 @@ li .slider-button {
 }
 
 .filter-fat {
+  display: flex;
+  align-items: end;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -1469,15 +1485,28 @@ li .slider-button {
 .filter-extender::before {
   content: '';
   position: absolute;
+  display:flex;
+  align-items: center;
   background-image: url("../img/icon-svg/checkbox-off.svg");
+  background-repeat: no-repeat;
   width: 20px;
   height: 20px;
-  top: 1px;
-  left: 0px;
+}
+.filter-extender:hover::before {
+  content: '';
+  position: absolute;
+  display:flex;
+  align-items: center;
+  background-image: url("../img/icon-svg/checkbox-off.svg");
+  filter: sepia(1) hue-rotate(320deg) saturate(10);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
 .real-checkbox:checked+.filter-extender::before {
   background-image: url("../img/icon-svg/checkbox-on.svg");
+  background-repeat: no-repeat;
   width: 24px;
   height: 20px;
   transition: 0.1s;
@@ -1490,13 +1519,17 @@ li .slider-button {
 .filter-button {
   font-weight: 500;
   line-height: 18px;
+  min-height: 36px;
   background-color: rgba(255, 255, 255, 0.2);
   color: var(--basic-white);
-  border: 2px solid #FFFFFF;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--basic-white);
   border-radius: 20px;
   margin-left: 15px;
   margin-top: 10px;
   padding: 7px 26px;
+  min-height: 36px;
 }
 
 .filter-button:hover {
@@ -1506,10 +1539,13 @@ li .slider-button {
 }
 
 .filter-button:active {
-  background-color: #EDEDED;
-  color: var(--full-black);
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  background-color: FFFFFF;
+  color: var(--full-black);
 }
 
 /* Мороженки в разделе каталога */
@@ -1559,7 +1595,6 @@ li .slider-button {
 
 .catalog-item-link h3 {
   font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .catalog-item-link h3:hover {
