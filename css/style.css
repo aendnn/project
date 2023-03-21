@@ -1275,6 +1275,7 @@ li .slider-button {
   height: 2px;
   width: 176px;
 }
+
 .range-line-filter {
   position: absolute;
   display: flex;
@@ -1295,6 +1296,10 @@ li .slider-button {
   background-color: #ABABAB;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.range-toggle:hover {
+  transform: scale(1.135);
 }
 
 .toggle-left {
@@ -1382,9 +1387,11 @@ li .slider-button {
   border-radius: 50%;
   margin-right: 11px;
 }
-.custom-radio:hover{
+
+.custom-radio:hover {
   border-color: var(--basic-white);
 }
+
 .custom-radio::before {
   content: "";
   position: absolute;
@@ -1398,10 +1405,12 @@ li .slider-button {
   transform: translate(-50%, -50%);
   opacity: 0;
 }
+
 .custom-radio:hover::before {
   background-color: var(--basic-white);
 }
-.real-radio:checked + .filter-fat .custom-radio::before {
+
+.real-radio:checked+.filter-fat .custom-radio::before {
   opacity: 1;
   background-repeat: no-repeat;
 }
@@ -1485,23 +1494,25 @@ li .slider-button {
 .filter-extender::before {
   content: '';
   position: absolute;
-  display:flex;
+  display: flex;
   align-items: center;
   background-image: url("../img/icon-svg/checkbox-off.svg");
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+  opacity: 0.8;
 }
+
 .filter-extender:hover::before {
   content: '';
   position: absolute;
-  display:flex;
+  display: flex;
   align-items: center;
   background-image: url("../img/icon-svg/checkbox-off.svg");
-  filter: sepia(1) hue-rotate(320deg) saturate(10);
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+  opacity: 1;
 }
 
 .real-checkbox:checked+.filter-extender::before {
@@ -1541,11 +1552,11 @@ li .slider-button {
 .filter-button:active {
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 20px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: red;
+  border: none;
+  width: 142px;
   background-color: FFFFFF;
   color: var(--full-black);
+  min-height: 36px;
 }
 
 /* Мороженки в разделе каталога */
@@ -1573,11 +1584,13 @@ li .slider-button {
 }
 
 .catalog-item {
- position:relative;
+  position: relative;
 }
+
 .catalog-item:nth-child(-n+4) {
   margin-top: 12px;
 }
+
 .catalog-icecream-jpg {
   border-radius: 50%;
   margin-top: 0;
@@ -1613,8 +1626,8 @@ li .slider-button {
 }
 
 .pagination-item {
-  margin-left: 20px;
   margin-bottom: 31px;
+  padding-left: 20px;
 }
 
 .pagination-item-link {
@@ -1741,6 +1754,7 @@ li .slider-button {
   margin-right: auto;
   visibility: hidden;
 }
+
 .catalog-item .button-quick-view {
   position: absolute;
   display: block;
@@ -1748,6 +1762,7 @@ li .slider-button {
   margin-right: auto;
   visibility: hidden;
 }
+
 .hits-item-content, .catalog-item-content {
   position: relative;
 }
@@ -1760,6 +1775,7 @@ li .slider-button {
   position: absolute;
   top: 189px;
 }
+
 .catalog-item .catalog-item-price {
   position: absolute;
   top: 180px;
