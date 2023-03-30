@@ -200,7 +200,7 @@ h2, h3 {
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   width: 341px;
-  min-height: 84px;
+  padding: 20px 0;
 }
 
 .search-input {
@@ -209,10 +209,10 @@ h2, h3 {
   border-radius: 4px;
   font-size: 14px;
   line-height: 16px;
-  width: 311px;
+  width: 100%;
   min-height: 44px;
-  margin: 20px 15px;
-  padding-left: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 .user-navigation-input::placeholder {
