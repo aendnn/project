@@ -199,8 +199,9 @@ h2, h3 {
   background: #F8F7F4;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
+  box-sizing: border-box;
   width: 341px;
-  padding: 20px 0;
+  padding: 20px 15px;
 }
 
 .search-input {
@@ -208,11 +209,19 @@ h2, h3 {
   border: 1px solid #D3D3D2;
   border-radius: 4px;
   font-size: 14px;
+  font-weight: 400;
   line-height: 16px;
   width: 100%;
   min-height: 44px;
   margin: 0;
   padding: 0;
+  padding-left: 15px;
+}
+
+.search-input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .user-navigation-input::placeholder {
@@ -243,15 +252,29 @@ h2, h3 {
   width: 277px;
   min-height: 214px;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
   border-radius: 4px;
   background: #FFFFFF;
+  padding: 20px 19px;
 }
 
 .email-input, .password-input {
-  margin-left:20px;
-  padding-left: 15px;
-  width: 233px;
-  min-height: 40px;
+  box-sizing: border-box;
+  width: 241px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0;
+  padding-left: 13px;
+}
+
+.sign-block {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .user-navigation-login-link {
@@ -271,21 +294,28 @@ h2, h3 {
   background-color: var(--basic-white);
 }
 
-.sign-block {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #999999;
-}
-
 .email-input:invalid {
   font-weight: 700;
   color: #323232;
 }
 
 .user-navigation-login-button {
-  font-size: 18px;
-  line-height: 16px;
+  padding: 10px 25px;
+}
+
+.form-user-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-user-auth {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: initial;
+  align-items: center;
+  width: 129px;
+  padding: 0;
+  margin: 0;
 }
 
 .user-navigation-login-link-text {}
@@ -1751,7 +1781,7 @@ li .slider-button {
 }
 
 .user-navigation a {
-  margin-left: 11px;
+  margin-left: 10px;
 }
 
 .promotions-item {
