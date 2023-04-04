@@ -207,20 +207,23 @@ h2, h3 {
 .user-navigation-input {
   background: #FFFFFF;
   box-sizing: border-box;
-  border: 2px solid rgba(178, 178, 178, 0.52);
+  border: 2px solid #d3d3d2;
   border-radius: 4px;
   font-size: 14px;
   line-height: 16px;
   width: 100%;
   margin: 0;
-  padding: 12px 12px;
+  padding: 12px 14px;
 }
 
-.user-navigation-input ::-webkit-search-cancel-button {
+.user-navigation-input::-webkit-search-decoration,
+.user-navigation-input::-webkit-search-cancel-button,
+.user-navigation-input::-webkit-search-results-button,
+.user-navigation-input::-webkit-search-results-decoration {
   display: none;
 }
 
-.user-navigation-input ::placeholder {
+.user-navigation-input::placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -264,7 +267,7 @@ h2, h3 {
   box-sizing: border-box;
   border-radius: 4px;
   background: #FFFFFF;
-  padding: 20px 19px;
+  padding: 20px 18px;
 }
 
 .sign-block {
@@ -300,7 +303,7 @@ h2, h3 {
 }
 
 .user-navigation-login-button {
-  padding: 10px 25px;
+  padding: 10px 26px;
 }
 
 .form-user-button {
@@ -317,7 +320,7 @@ h2, h3 {
   width: 129px;
   padding: 0;
   margin: 0;
-  padding-left: 21px;
+  margin-left: 20px;
 }
 
 .user-navigation-login-link-text {}
@@ -325,7 +328,7 @@ h2, h3 {
 .form-login-link {
   font-weight: 400;
   font-size: 13px;
-  line-height: 15px;
+  line-height: 12px;
   color: #323232;
   border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
@@ -388,19 +391,44 @@ h2, h3 {
   font-size: 14px;
   line-height: 16px;
   color: var(--full-black);
-  border-radius: 4px;
   padding-top: 10px;
   padding-right: 20px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
   padding-left: 21px;
 }
 
-.catalog-navigation-item:not(:nth-of-type(1)) {
+.catalog-navigation-item:not(:nth-of-type(1)) .catalog-navigation-link {
+  padding-top: 7px;
+  padding-right: 20px;
+  padding-bottom: 8px;
+  padding-left: 21px;
+}
+
+.catalog-navigation-item:nth-last-of-type(1) .catalog-navigation-link:hover {
+  border-radius: 0 0 4px 4px;
+}
+
+.catalog-navigation-item:(:nth-last-of-type(1)) .catalog-navigation-link:active {
+  border-radius: 0 0 4px 4px;
+}
+
+.catalog-navigation-item {
+  position: relative;
 }
 
 .catalog-navigation-link b {
   font-size: 14px;
   line-height: 18px;
+}
+
+.catalog-navigation-link b:after {
+  position: absolute;
+  content: "";
+  top: 37px;
+  left: 6px;
+  width: 128px;
+  height: 1px;
+  background-image: url("../img/icon-svg/separator.svg");
 }
 
 .current-page-item {
