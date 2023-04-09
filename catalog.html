@@ -52,9 +52,8 @@
                 </svg>
                 <span class="visually-hidden">Поиск</span></a>
               <form class="form-search visually-hidden" action="https://echo.htmlacademy.ru/courses" method="POST">
-                <label class="search-label" for="search">Поиск</label>
+                <label class="search-label visually-hidden" for="search">Поиск</label>
                 <input class="user-navigation-input search-input" type="search" name="search" id="search" placeholder="Крем-брюле" required>
-                <button class="search-button" type="submit">Найти</button>
               </form>
             </div>
             <div class="user-navigation-login">
@@ -67,16 +66,20 @@
                 </svg>Вход</a>
               <form class="form-login visually-hidden" action="https://echo.htmlacademy.ru/courses" method="POST">
                 <p class="sign-block">
-                  <label class="email-label" for="email">введите ваш emal</label>
+                  <label class="email-label visually-hidden" for="email">введите ваш emal</label>
                   <input class="user-navigation-input email-input" type="email" name="email" id="email" placeholder="email@example.com" required>
                 </p>
                 <p class="sign-block">
-                  <label class="password-label" for="password">введите ваш пароль</label>
+                  <label class="password-label visually-hidden" for="password">введите ваш пароль</label>
                   <input class="user-navigation-input password-input" type="password" name="password" id="password" placeholder="......" required>
                 </p>
-                <button class="button user-navigation-login-button" type="submit">Войти</button>
-                <a class="form-login-link" href="#">Забыли пароль?</a>
-                <a class="form-login-link" href="#">Новая регистрация</a>
+                <div class="form-user-button">
+                  <button class="button user-navigation-login-button" type="submit">Войти</button>
+                  <p class="form-user-auth">
+                    <a class="form-login-link" href="#">Забыли пароль?</a>
+                    <a class="form-login-link" href="#">Новая регистрация</a>
+                  </p>
+                </div>
               </form>
             </div>
             <div class="user-navigation-cart cart-score">
@@ -87,7 +90,7 @@
                   <path d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" fill="white" />
                 </svg>
                 2 товара</a>
-              <div class="cart-content visually-hidden">
+              <div class="cart-content">
                 <table class="cart-content-table">
                   <tr class="cart-item">
                     <td class="cart-item-delete">
