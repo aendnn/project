@@ -358,6 +358,9 @@ h2, h3 {
   position: absolute;
   top: 35px;
   right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 539px;
   font-weight: 400;
   font-size: 13px;
@@ -365,10 +368,21 @@ h2, h3 {
   color: var(--full-black);
   background-color: var(--basic-white);
   border-radius: 4px;
+  padding: 20px 14px 21px 15px;
+  box-sizing: border-box;
 }
 
 .cart-content-table {
   border-bottom: 1px solid #CACAC7;
+}
+
+.button-delete {
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .cart-item-link {
@@ -376,9 +390,15 @@ h2, h3 {
   border-radius: 50%;
 }
 
+.cart-total {
+  width: 100%;
+  text-align: right;
+}
+
 .button-checkout {
   font-size: 18px;
   line-height: 16px;
+  align-self: flex-end;
 }
 
 .catalog-navigation {
@@ -1107,6 +1127,7 @@ li .slider-button {
 }
 
 .feedback-form {
+  box-sizing: border-box;
   background-color: #F8F7F4;
   border-radius: 6px;
   position: absolute;
@@ -1114,7 +1135,11 @@ li .slider-button {
   top: 50%;
   display: block;
   width: 477px;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  padding-left: 24px;
+  padding-top: 14px;
+  padding-right: 25px;
+  padding-bottom: 27px;
 }
 
 .feedback-form h2 {
@@ -1122,17 +1147,14 @@ li .slider-button {
   font-size: 24px;
   line-height: 28px;
   color: #323232;
-  padding-left: 24px;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 
 .feedback-sign {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
-  margin-left: 23px;
-  margin-right: 185px;
+  margin-right: 160px;
 }
 
 .feedback-user-button {
@@ -1146,8 +1168,6 @@ li .slider-button {
   line-height: 24px;
   text-shadow: 0px 2px 5px rgb(160 32 11 / 76%);
   padding: 10px 24px;
-  margin-right: 25px;
-  margin-bottom: 27px;
 }
 
 .feedback-button-close {
@@ -1159,6 +1179,7 @@ li .slider-button {
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  padding: 0;
 }
 
 .feedback-button-close::before,
@@ -1189,7 +1210,7 @@ li .slider-button {
   line-height: 16px;
   width: 100%;
   margin: 0;
-  padding: 12px 14px;
+  padding: 12px 12px;
 }
 
 .feedback-input::placeholder {
@@ -1218,8 +1239,6 @@ li .slider-button {
 .feedback-textarea-sign {
   margin: 0;
   padding: 0;
-  margin-left: 23px;
-  margin-right: 25px;
   margin-bottom: 19px;
 }
 
@@ -1233,7 +1252,7 @@ li .slider-button {
   width: 100%;
   height: 154px;
   resize: none;
-  padding: 11px 14px;
+  padding: 9px 12px;
 }
 
 .feedback-textarea::placeholder {
