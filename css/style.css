@@ -80,6 +80,10 @@ h2, h3 {
   padding: 0px;
 }
 
+td {
+  padding: 0;
+}
+
 .page {
   height: 100%;
 }
@@ -368,14 +372,24 @@ h2, h3 {
   color: var(--full-black);
   background-color: var(--basic-white);
   border-radius: 4px;
-  padding: 20px 14px 21px 15px;
+  padding: 16px 14px 21px 15px;
   box-sizing: border-box;
 }
 
 .cart-content-table {
   border-bottom: 1px solid #CACAC7;
+  border-collapse: collapse;
 }
 
+.cart-item {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  margin-bottom: 7px;
+}
+.cart-item:last-child {
+  margin-bottom: 20px;
+}
 .button-delete {
   width: 11px;
   height: 11px;
@@ -390,14 +404,52 @@ h2, h3 {
   border-radius: 50%;
 }
 
+.cart-item-delete {
+  padding-left: 6px;
+}
+
+.cart-item-image {
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+}
+
+.cart-item-link .icecream-jpg {
+  margin-top: 0;
+}
+
+.cart-item-caption {
+  width: 216px;
+  padding-left: 13px;
+}
+
+
+.cart-item-count {
+  width: 97px;
+  padding-left: 31px;
+}
+
+.cart-item-price {
+  width: 50px;
+  padding-left: 24px;
+  padding-right: 20px;
+}
+
 .cart-total {
-  width: 100%;
-  text-align: right;
+  display: flex;
+  align-self: end;
+  font-size: 15px;
+  line-height: 16px;
+  margin-top: 12px;
+  margin-right: 2px;
 }
 
 .button-checkout {
+  font-weight: 700;
   font-size: 18px;
-  line-height: 16px;
+  line-height: 24px;
+  text-shadow: 0px 2px 5px rgb(160 32 11 / 76%);
+  padding: 10px 16px;
   align-self: flex-end;
 }
 
@@ -1118,6 +1170,7 @@ li .slider-button {
 /* feedback пока что вынес ниже header */
 .social-feedback {
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   display: flex;
