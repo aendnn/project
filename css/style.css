@@ -387,9 +387,11 @@ td {
   min-height: 45px;
   margin-bottom: 7px;
 }
+
 .cart-item:last-child {
   margin-bottom: 20px;
 }
+
 .button-delete {
   width: 11px;
   height: 11px;
@@ -532,9 +534,10 @@ td {
 
 /* header/contacts */
 .contacts {
-  display: grid;
-  justify-items: flex=end;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  align-self: end;
 }
 
 .contacts-text {
@@ -732,7 +735,6 @@ li .slider-button {
   background-position: center;
   background-color: #FFFFFF;
   border-radius: 50%;
-  margin-top: 9px;
 }
 
 .hits-item-desc, .catalog-item-desc {
@@ -742,6 +744,7 @@ li .slider-button {
 /* также повторяется для айтемов каталога */
 .icecream-jpg {
   border-radius: 50%;
+  margin-top: 0;
 }
 
 .hits-item-price, .catalog-item-price {
@@ -778,7 +781,7 @@ li .slider-button {
 
 .button-quick-view {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  padding: 10px 17px;
+  padding: 10px 16px;
 }
 
 /* advantages */
@@ -787,6 +790,7 @@ li .slider-button {
   background-image: url("../img/pattern.jpg");
   background-repeat: repeat;
   border-radius: 16px;
+  margin-top: 40px;
   padding: 24px 20px;
 }
 
@@ -1956,14 +1960,13 @@ li .slider-button {
 
 .hits-item {
   position: relative;
-  margin-top: 16px;
-  padding-top: 15px;
+  margin-top: 40px;
 }
 
 .hits-item::before, .catalog-item::before {
-  z-index: 2;
   content: "";
   position: absolute;
+  z-index: 1;
   top: -6px;
   left: -13px;
   width: 100%;
@@ -1973,6 +1976,11 @@ li .slider-button {
   box-shadow: 0px 20px 20px rgb(0 0 0 / 20%);
   border-radius: 4px;
   padding: 6px 13px 21px 13px;
+  visibility: hidden;
+}
+
+.hits-item:hover::before, .catalog-item:hover::before {
+  visibility: visible;
 }
 
 .hits-item h3, .catalog-item h3 {
@@ -1983,14 +1991,32 @@ li .slider-button {
 
 .hits-item .button-quick-view {
   position: absolute;
+  z-index: 3;
   display: block;
-  transform: translate(16%, 18%);
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -51px;
+  visibility: hidden;
+}
+
+.hits-item:hover .button-quick-view {
+  visibility: visible;
 }
 
 .catalog-item .button-quick-view {
   position: absolute;
+  Z-index: 3;
   display: block;
-  transform: translate(16%, 18%);
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -51px;
+  visibility: hidden;
+}
+
+.catalog-item:hover .button-quick-view {
+  visibility: visible;
 }
 
 .hits-item-content, .catalog-item-content {
@@ -1998,12 +2024,14 @@ li .slider-button {
 }
 
 .hits-item-link, .catalog-item-link {
+  position: relative;
+  z-index: 2;
   text-align: center;
 }
 
 .hits-item .hits-item-price {
   position: absolute;
-  top: 189px;
+  top: 180px;
 }
 
 .catalog-item .catalog-item-price {
