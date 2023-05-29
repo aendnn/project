@@ -133,6 +133,14 @@ td {
   margin-left: 10px;
 }
 
+.catalog-navigation {
+  visibility: hidden;
+}
+
+.site-navigation-item:hover .catalog-navigation {
+  visibility: visible;
+}
+
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -492,8 +500,16 @@ td {
   border-radius: 0 0 4px 4px;
 }
 
+.catalog-navigation-item:nth-of-type(1) .catalog-navigation-link:hover {
+  border-radius: 4px 4px 0 0;
+}
+
 .catalog-navigation-item:(:nth-last-of-type(1)) .catalog-navigation-link:active {
   border-radius: 0 0 4px 4px;
+}
+
+.catalog-navigation-item:(:nth-of-type(1)) .catalog-navigation-link:active {
+  border-radius: 4px 4px 0 0;
 }
 
 .catalog-navigation-item {
@@ -584,6 +600,25 @@ td {
   margin-top: -25px;
 }
 
+.big-offers {
+  z-index: 2;
+}
+
+.container-wrapper::before {
+  position: absolute;
+  content: "";
+  left: 242px;
+  top: 0px;
+  width: 716px;
+  height: 716px;
+  filter: blur(125px);
+  border-radius: 50%;
+  background-image: url("../img/backlight1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
 .button {
   display: inline-block;
   background-image: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
@@ -670,6 +705,10 @@ li .slider-button {
 }
 
 /* promotions */
+.promotions {
+  z-index: 1;
+}
+
 .promotions-wrapper {
   padding-top: 23px;
   display: grid;
