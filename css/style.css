@@ -131,7 +131,7 @@ td {
   margin-left: 10px;
 }
 
-.site-navigation-link:hover+.catalog-navigation {
+.catalog-navigation {
   visibility: hidden;
 }
 
@@ -626,6 +626,7 @@ td {
   background-image: url("../img/backlight1.png");
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .button {
