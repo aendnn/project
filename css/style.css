@@ -135,7 +135,7 @@ td {
   visibility: hidden;
 }
 
-.site-navigation-link:hover+.catalog-navigation {
+.site-navigation-item:hover .catalog-navigation {
   visibility: visible;
 }
 
@@ -474,7 +474,7 @@ td {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: normal;
+  align-items: flex-start;
   top: 59px;
   left: 184px;
   width: 143px;
