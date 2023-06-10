@@ -94,9 +94,7 @@ td {
 }
 
 /* header/site-navigation */
-.main-header {
-  z-index: 1;
-}
+.main-header {}
 
 .wrapper {
   margin: 0 auto;
@@ -133,11 +131,11 @@ td {
   margin-left: 10px;
 }
 
-.catalog-navigation {
+.site-navigation-link:hover+.catalog-navigation {
   visibility: hidden;
 }
 
-.site-navigation-item:hover .catalog-navigation {
+.site-navigation-link:hover+.catalog-navigation {
   visibility: visible;
 }
 
@@ -202,6 +200,14 @@ td {
 .user-navigation-search-link:hover {
   color: var(--full-black);
   background-color: var(--basic-white);
+}
+
+.user-navigation-search-link:hover + .form-search {
+  visibility: hidden;
+}
+
+.user-navigation-search-link:hover + .form-search {
+  visibility: visible;
 }
 
 .form-search {
@@ -466,6 +472,9 @@ td {
 
 .catalog-navigation {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
   top: 59px;
   left: 184px;
   width: 143px;
@@ -475,6 +484,7 @@ td {
   padding: 0;
   background-color: var(--basic-white);
   border-radius: 4px;
+  z-index: 10;
 }
 
 .catalog-navigation-link {
@@ -604,7 +614,7 @@ td {
   z-index: 2;
 }
 
-.container-wrapper::before {
+.index_wrapper::before {
   position: absolute;
   content: "";
   left: 242px;
@@ -616,7 +626,6 @@ td {
   background-image: url("../img/backlight1.png");
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 0;
 }
 
 .button {
