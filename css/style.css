@@ -94,7 +94,9 @@ td {
 }
 
 /* header/site-navigation */
-.main-header {}
+.main-header {
+  z-index: 2;
+}
 
 .wrapper {
   margin: 0 auto;
@@ -139,7 +141,7 @@ td {
 .site-navigation-item:hover .catalog-navigation {
   visibility: visible;
 }
-
+.catalog-navigation:hover
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -586,6 +588,7 @@ td {
 .big-offers {
   text-align: center;
   margin-top: -50px;
+  z-index: 1;
 }
 
 .big-offers-list-slider {
