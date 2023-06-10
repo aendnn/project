@@ -124,6 +124,7 @@ td {
 .site-navigation-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -474,7 +475,7 @@ td {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: normal;
   top: 59px;
   left: 184px;
   width: 143px;
