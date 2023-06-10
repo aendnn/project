@@ -141,7 +141,7 @@ td {
 .site-navigation-item:hover .catalog-navigation {
   visibility: visible;
 }
-.catalog-navigation:hover
+
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -614,10 +614,6 @@ td {
   margin-top: -25px;
 }
 
-.big-offers {
-  z-index: 2;
-}
-
 .index_wrapper::before {
   position: absolute;
   content: "";
@@ -630,7 +626,6 @@ td {
   background-image: url("../img/backlight1.png");
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1;
 }
 
 .button {
