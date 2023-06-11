@@ -136,6 +136,9 @@ td {
 .site-navigation-item {
   position: relative;
 }
+.site-navigation-item:first-child {
+  padding-bottom: 15px;
+}
 .catalog-navigation {
   visibility: hidden;
 }
@@ -148,6 +151,7 @@ td {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 10px;
 }
 
 .site-navigation-link {
@@ -169,14 +173,14 @@ td {
   margin-left: 7px;
 }
 
-.site-navigation-item:not(.current-site-item) .site-navigation-link:hover {
+.site-navigation-item:hover:not(.current-site-item) .site-navigation-link {
   border-radius: 26px;
   color: var(--full-black);
   background-color: var(--basic-white);
   border-bottom-color: transparent;
 }
 
-.site-navigation-item:not(.current-site-item) .site-navigation-link:active {
+.site-navigation-item:active:not(.current-site-item) .site-navigation-link {
   background: #EDEDED;
   box-shadow: inset 0px 2px 1px #696969;
   border-radius: 26px;
@@ -200,6 +204,7 @@ td {
   justify-content: center;
   width: 32px;
   height: 32px;
+  margin-bottom: 10px;
 }
 
 .user-navigation-search-link:hover {
@@ -211,7 +216,7 @@ td {
   visibility: hidden;
 }
 
-.user-navigation-search-link:hover + .form-search {
+.user-navigation-search:hover .form-search {
   visibility: visible;
 }
 
@@ -281,6 +286,14 @@ td {
 }
 
 .form-login {
+  visibility: hidden;
+}
+
+.user-navigation-login:hover .form-login {
+  visibility: visible;
+}
+
+.form-login {
   position: absolute;
   right: 0px;
   top: 35px;
@@ -313,6 +326,7 @@ td {
   display: flex;
   align-items: center;
   padding: 6px 16px;
+  margin-bottom: 10px;
 }
 
 .user-navigation-login-link:hover {
@@ -366,6 +380,7 @@ td {
   display: flex;
   align-items: center;
   padding: 6px 16px;
+  margin-bottom: 10px;
 }
 
 .user-navigation-cart {
