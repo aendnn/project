@@ -644,7 +644,7 @@ td {
   height: 0;
 }
 .big-offers-slide.current-slide {
- min-height: 530px;
+ min-height: 531px;
 }
 .wrapper::before {
   position: absolute;
@@ -656,6 +656,7 @@ td {
   height: 716px;
   filter: blur(125px);
   border-radius: 50%;
+  background-image: url("../img/backlight1.png");
   background-position: center;
   background-repeat: no-repeat;
 }
