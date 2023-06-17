@@ -13,13 +13,50 @@ toggles.forEach((item, index) => {
   item.parentElement.classList.add('current-slider-item');
   slides[index].classList.add('current-slide');
   if (index === 0) {
-    wrapper.style.backgroundColor = "pink";
+    wrapper.classList.add("dark-green");
+    wrapper.classList.remove("blue-gray");
+    wrapper.classList.remove("light-brown");
   }
   else if (index === 1) {
-    wrapper.style.backgroundColor = "blue";
+    wrapper.classList.add("blue-gray");
+    wrapper.classList.remove("dark-green");
+    wrapper.classList.remove("light-brown");
   }
   else {
-    wrapper.style.backgroundColor = "green";
+    wrapper.classList.add("light-brown");
+    wrapper.classList.remove("dark-green");
+    wrapper.classList.remove("blue-gray");
   }
 })
 })
+
+// feedback
+/** const button_contacts = document.querySelector('.button-contacts');
+const slides = document.querySelectorAll('.big21offers-slide');
+const wrapper = document.querySelector('.feedback-button-close');
+
+toggles.forEach((item, index) => {
+  item.addEventListener('click', () => {
+  slides.forEach(item => item.classList.remove('current-slide'));
+  toggles.forEach(toggle => toggle.parentElement.classList.remove('current-slider-item'));
+
+  item.parentElement.classList.add('current-slider-item');
+  slides[index].classList.add('current-slide');
+  if (index === 0) {
+    wrapper.classList.add("dark-green");
+    wrapper.classList.remove("blue-gray");
+    wrapper.classList.remove("light-brown");
+  }
+  else if (index === 1) {
+    wrapper.classList.add("blue-gray");
+    wrapper.classList.remove("dark-green");
+    wrapper.classList.remove("light-brown");
+  }
+  else {
+    wrapper.classList.add("light-brown");
+    wrapper.classList.remove("dark-green");
+    wrapper.classList.remove("blue-gray");
+  }
+})
+})
+**/

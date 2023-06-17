@@ -105,15 +105,15 @@ td {
   align-content: start;
 }
 
-.wrapper .pink {
+.dark-green {
   background-color: var(--dark-green);
 }
 
-.wrapper .blue {
-  background-color: var(--blue-gray);
+.blue-gray {
+  background: var(--blue-gray);
 }
 
-.wrapper .green {
+.light-brown {
   background-color: var(--light-brown);
 }
 
@@ -615,6 +615,7 @@ td {
 .content {}
 
 .big-offers {
+  position:relative;
   text-align: center;
   margin-top: -50px;
   z-index: 1;
@@ -640,9 +641,10 @@ td {
 .big-offers-slide:not(.current-slide) {
   overflow: hidden;
   height: 0;
-  margin-top: -25px;
 }
+.current-slide {
 
+}
 .wrapper::before {
   position: absolute;
   content: "";
@@ -653,9 +655,19 @@ td {
   height: 716px;
   filter: blur(125px);
   border-radius: 50%;
-  background-image: url("../img/backlight1.png");
   background-position: center;
   background-repeat: no-repeat;
+}
+.wrapper.dark-green::before {
+  background-image: url("../img/backlight1.png");
+}
+
+.wrapper.blue-grey::before {
+  background-image: url("../img/backlight2.png");
+}
+
+.wrapper.light-brown::before {
+  background-image: url("../img/backlight3.png");
 }
 
 .button {
@@ -709,10 +721,11 @@ td {
 }
 
 .slider-button-list {
+  position: absolute;
   list-style: none;
   margin: 0;
-  margin-bottom: 41px;
   padding: 0;
+  top: 483px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -749,7 +762,7 @@ li .slider-button {
 }
 
 .promotions-wrapper {
-  padding-top: 23px;
+  margin-top: 41px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 26px;
