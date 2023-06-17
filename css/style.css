@@ -618,6 +618,7 @@ td {
   position:relative;
   text-align: center;
   margin-top: -50px;
+  margin-bottom: 41px;
   z-index: 1;
 }
 
@@ -642,8 +643,8 @@ td {
   overflow: hidden;
   height: 0;
 }
-.current-slide {
-
+.big-offers-slide.current-slide {
+ min-height: 530px;
 }
 .wrapper::before {
   position: absolute;
@@ -662,7 +663,7 @@ td {
   background-image: url("../img/backlight1.png");
 }
 
-.wrapper.blue-grey::before {
+.wrapper.blue-gray::before {
   background-image: url("../img/backlight2.png");
 }
 
@@ -762,7 +763,6 @@ li .slider-button {
 }
 
 .promotions-wrapper {
-  margin-top: 41px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 26px;
