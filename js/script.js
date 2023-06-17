@@ -1,13 +1,12 @@
 customSelect('select');
 
-Ф
 // slider
 const toggles = document.querySelectorAll('.slider-button');
 const slides = document.querySelectorAll('.big-offers-slide');
 const wrapper = document.querySelector('.wrapper');
 
-toggles.forEach((item, Index) => {
-  item.addEventListener('click' , () => {
+toggles.forEach((item, index) => {
+  item.addEventListener('click', () => {
   slides.forEach(item => item.classList.remove('current-slide'));
   toggles.forEach(toggle => toggle.parentElement.classList.remove('current-slider-item'));
 
@@ -22,4 +21,5 @@ toggles.forEach((item, Index) => {
   else {
     wrapper.style.backgroundColor = "green";
   }
-});
+})
+})
