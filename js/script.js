@@ -31,13 +31,13 @@ toggles.forEach((item, index) => {
 })
 
 // feedback
-/** const button_contacts = document.querySelector('.button-contacts');
-const slides = document.querySelectorAll('.big21offers-slide');
-const wrapper = document.querySelector('.feedback-button-close');
+/** const feedback = document.querySelector('.button-contacts');
+const modal = document.querySelector('.modal-open');
+const close = document.querySelector('.feedback-button-close');
 
-toggles.forEach((item, index) => {
+feedback.forEach((item, index) => {
   item.addEventListener('click', () => {
-  slides.forEach(item => item.classList.remove('current-slide'));
+  slides.forEach(item => item.classList.add('current-slide'));
   toggles.forEach(toggle => toggle.parentElement.classList.remove('current-slider-item'));
 
   item.parentElement.classList.add('current-slider-item');
