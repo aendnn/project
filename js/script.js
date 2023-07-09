@@ -31,9 +31,11 @@ toggles.forEach((item, index) => {
 })
 
 // feedback
-/** const feedback = document.querySelector('.button-contacts');
+/**
+const feedback = document.querySelector('.button-contacts');
 const modal = document.querySelector('.modal-open');
 const close = document.querySelector('.feedback-button-close');
+const overlay = document.querySelector('.social-feedback')
 
 feedback.forEach((item, index) => {
   item.addEventListener('click', () => {
