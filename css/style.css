@@ -94,7 +94,7 @@ td {
 }
 
 /* header/site-navigation */
-.main-header {
+.main-header.header-slider {
   z-index: 2;
 }
 
@@ -1451,7 +1451,7 @@ li .slider-button {
 
 .catalog-breadcrumbs-list {
   position:relative;
-  z-index:1;
+  z-index:2;
   list-style: none;
   margin: 0;
   padding: 0;
