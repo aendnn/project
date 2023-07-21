@@ -1267,7 +1267,6 @@ li .slider-button {
 /* feedback пока что вынес ниже header */
 .social-feedback  {
   position: fixed;
-  visibility: hidden;
   z-index: 3;
   top: 0;
   left: 0;
@@ -1275,11 +1274,12 @@ li .slider-button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
 }
-
-.modal-open {
+.modal-show {
   visibility: visible;
 }
+
 .feedback-form {
   box-sizing: border-box;
   background-color: #F8F7F4;

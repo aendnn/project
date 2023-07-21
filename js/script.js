@@ -29,36 +29,3 @@ toggles.forEach((item, index) => {
   }
 })
 })
-
-// feedback
-/**
-const feedback = document.querySelector('.button-contacts');
-const modal = document.querySelector('.modal');
-const close = document.querySelector('.feedback-button-close');
-const overlay = document.querySelector('.social-feedback')
-
-feedback.forEach((item, index) => {
-  item.addEventListener('click', () => {
-  slides.forEach(item => item.classList.add('current-slide'));
-  toggles.forEach(toggle => toggle.parentElement.classList.remove('current-slider-item'));
-
-  item.parentElement.classList.add('current-slider-item');
-  slides[index].classList.add('current-slide');
-  if (index === 0) {
-    wrapper.classList.add("dark-green");
-    wrapper.classList.remove("blue-gray");
-    wrapper.classList.remove("light-brown");
-  }
-  else if (index === 1) {
-    wrapper.classList.add("blue-gray");
-    wrapper.classList.remove("dark-green");
-    wrapper.classList.remove("light-brown");
-  }
-  else {
-    wrapper.classList.add("light-brown");
-    wrapper.classList.remove("dark-green");
-    wrapper.classList.remove("blue-gray");
-  }
-})
-})
-**/
