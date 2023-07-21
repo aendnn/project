@@ -399,9 +399,17 @@ td {
   position: relative;
 }
 
-.user-navigation-cart-link:hover {
+.user-navigation-cart:hover .user-navigation-cart-link{
   color: var(--full-black);
   background-color: var(--basic-white);
+}
+
+.cart-content {
+  visibility: hidden;
+}
+
+.user-navigation-cart:hover .cart-content {
+    visibility: visible;
 }
 
 .cart-content {
@@ -646,7 +654,7 @@ td {
 .big-offers-slide.current-slide {
  min-height: 531px;
 }
-.wrapper::before {
+.main-wrapper::before {
   position: absolute;
   content: "";
   left: 50%;
@@ -1429,7 +1437,6 @@ li .slider-button {
 
 /* catalog. всё после хедера ( контент и клебные крошки) */
 .catalog-content {
-  z-index: 2;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1443,7 +1450,8 @@ li .slider-button {
 }
 
 .catalog-breadcrumbs-list {
-  z-index: 1;
+  position:relative;
+  z-index:1;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1739,40 +1747,6 @@ li .slider-button {
   margin-left: 17px;
 }
 
-/* скрыл для пробы
-.fat-group {
-  position:relative;
-}
-
-.filter-fat {
-  padding-left: 11px;
-}
-
-.filter-fat::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background: rgba(255, 255, 255, 0.2);
-  border: 3px solid rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  vertical-align: text-top;
-  margin-right: 11px;
-}
-.filter-fat::after {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  width: 7.92px;
-  height: 7.92px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-*/
 .extender-group {
   width: 711px;
 }
@@ -2027,10 +2001,6 @@ li .slider-button {
 }
 
 .user-navigation-login:hover path {
-  fill: black;
-}
-
-.user-navigation-cart-link:hover path {
   fill: black;
 }
 
