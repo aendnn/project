@@ -90,7 +90,6 @@ td {
 
 .page-body {
   min-height: 100%;
-  /* выравнивает по верху */
 }
 
 /* header/site-navigation */
@@ -208,7 +207,6 @@ td {
 }
 
 .user-navigation-search-link {
-  /* я хз, мне кажется лупа не по центру, я не понимаю как сделать, чтобы она была в центре кружка */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
@@ -623,7 +621,6 @@ td {
 }
 
 /* big-offers */
-.content {}
 
 .big-offers {
   position:relative;
@@ -932,8 +929,6 @@ li .slider-button {
   margin-bottom: 0px;
 }
 
-/* Тут я понял. что флекс в такой хуйне удобнее. так как я ща задам отступы только для 3 элемента. и если добавятся еще преимущества, то будет хуевенько   margin-left: 75px;
-  margin-bottom: 26px;*/
 .advantages-item::before {
   position: absolute;
   content: "";
@@ -1020,7 +1015,6 @@ li .slider-button {
 .newsletter-wrapper {
   margin: 0;
   color: var(--black-form);
-  /* ХЗ как сделать радиус */
   border-radius: 16px;
   background-color: #F8F7F4;
   background-repeat: no-repeat;
@@ -1218,7 +1212,6 @@ li .slider-button {
 }
 
 .social-button:hover path,
-/* Не совсем понимаю. Как менять это всё при наведении */
 .social-button:active path {
   fill: var(--basic-white);
   fill-opacity: 1;
@@ -1755,7 +1748,6 @@ li .slider-button {
 }
 
 .filter-sorting {
-  /* пока задал такой цвет. нужно будет убрать само поле фильтра */
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -2006,7 +1998,9 @@ li .slider-button {
 .user-navigation-login:hover path {
   fill: black;
 }
-
+.user-navigation-cart-link:hover path {
+  fill: black;
+}
 .user-navigation-cart-link svg {
   padding-right: 8px;
 }
