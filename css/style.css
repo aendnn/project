@@ -1603,7 +1603,7 @@ li .slider-button {
 
 .range-line-filter {
   position: absolute;
-  display: flex;
+  display: BLOCK;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -1615,6 +1615,7 @@ li .slider-button {
 
 .range-toggle {
   content: "";
+  display: BLOCK;
   width: 4px;
   height: 4px;
   border: 8px solid #fff;
@@ -2005,6 +2006,9 @@ li .slider-button {
 }
 .user-navigation-cart-link:hover path {
   fill: black;
+}
+.user-navigation-cart-link:hover .cart-full {
+  fill: var(--red-orange);
 }
 .user-navigation-cart-link svg {
   padding-right: 8px;
