@@ -409,6 +409,10 @@ td {
   background-color: var(--basic-white);
 }
 
+.user-navigation-cart:hover path{
+  fill: var(--full-black);
+}
+
 .cart-content {
   visibility: hidden;
 }
@@ -798,10 +802,12 @@ li .slider-button {
 
 .promotions-item:nth-of-type(1) {
   background-image: url("../img/malina-back.jpg");
+  background-color:	#6e0c2d;
 }
 
 .promotions-item:nth-last-of-type(1) {
   background-image: url("../img/shocko-back.jpg");
+  background-color: #3d1803;
 }
 
 .promotions-item-text {
@@ -1063,7 +1069,7 @@ li .slider-button {
 }
 
 .newsletter-input:focus {
-  border: 2px solid rgba(46, 136, 228, 0.52);
+  border: 1px solid rgba(46, 136, 228, 0.52);
   outline: 0;
 }
 
