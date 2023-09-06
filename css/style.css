@@ -650,6 +650,7 @@ td {
 
 .big-offers-link {
   display: block;
+  min-height: 443px;
 }
 
 .big-offers-link:hover {
@@ -899,6 +900,7 @@ li .slider-button {
   color: var(--full-black);
   background-image: url("../img/pattern.jpg");
   background-repeat: repeat;
+  background-color: #faebd7;
   border-radius: 16px;
   margin-top: 40px;
   padding: 24px 20px;
@@ -984,6 +986,7 @@ li .slider-button {
   color: var(--full-black);
   background-image: url("../img/strawberry-back.jpg");
   background-repeat: no-repeat;
+  background-color: var(--basic-white);
   background-size: cover;
   border-radius: 16px;
   padding: 18px 20px;
@@ -1609,7 +1612,6 @@ li .slider-button {
 
 .range-line-filter {
   position: absolute;
-  display: BLOCK;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -1621,13 +1623,14 @@ li .slider-button {
 
 .range-toggle {
   content: "";
-  display: BLOCK;
-  width: 4px;
-  height: 4px;
-  border: 8px solid #fff;
+  width: 20px;
+  height: 20px;
+  border: 8px solid rgba(255, 255, 255, 0.8);
   background-color: #ABABAB;
   border-radius: 50%;
   cursor: pointer;
+  display: block;
+  padding: 0;
 }
 
 .range-toggle:hover {
@@ -1713,9 +1716,10 @@ li .slider-button {
 
 .custom-radio {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
   border: 3px solid rgba(255, 255, 255, 0.8);
+  background-color: inherit;
   border-radius: 50%;
   margin-right: 11px;
 }
@@ -1742,7 +1746,7 @@ li .slider-button {
   background-color: var(--basic-white);
 }
 
-.real-radio:checked+.filter-fat .custom-radio::before {
+.real-radio:checked + .filter-fat .custom-radio::before {
   opacity: 1;
   background-repeat: no-repeat;
 }
@@ -2010,8 +2014,8 @@ li .slider-button {
 .user-navigation-login:hover path {
   fill: black;
 }
-.user-navigation-cart-link:hover path {
-  fill: black;
+.user-navigation-cart:hover .cart-full{
+  fill: var(--red-orange);
 }
 .user-navigation-cart-link:hover .cart-full {
   fill: var(--red-orange);
