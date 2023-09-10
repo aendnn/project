@@ -14,7 +14,7 @@ document.querySelector('.feedback-button-close').addEventListener('click', () =>
 });
 
 document.addEventListener('keydown', () => {
-  if (evt.key === 'Escape') {
+  if ('evt'.key === 'Escape') {
   overlay.classList.remove('modal-show');
   }
 });
