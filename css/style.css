@@ -802,12 +802,12 @@ td {
 }
 
 .promotions-item:nth-of-type(1) {
-  background-image: url("../img/malina-back.jpg");
+  background-image: url("../img/background/malina-back.jpg");
   background-color:	#6e0c2d;
 }
 
 .promotions-item:nth-last-of-type(1) {
-  background-image: url("../img/shocko-back.jpg");
+  background-image: url("../img/background/shocko-back.jpg");
   background-color: #3d1803;
 }
 
@@ -828,7 +828,7 @@ td {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 267px);
+  grid-template-columns: repeat(auto-fill, minmax(267px, 1fr));
   column-gap: 26px;
 }
 
@@ -898,7 +898,7 @@ td {
 /* advantages */
 .advantages {
   color: var(--full-black);
-  background-image: url("../img/pattern.jpg");
+  background-image: url("../img/background/pattern.jpg");
   background-repeat: repeat;
   background-color: #faebd7;
   border-radius: 16px;
@@ -906,7 +906,7 @@ td {
   padding: 24px 20px;
 }
 
-.advantages h3 {
+.advantages-title {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -984,7 +984,7 @@ td {
 .article {
   display: block;
   color: var(--full-black);
-  background-image: url("../img/strawberry-back.jpg");
+  background-image: url("../img/background/strawberry-back.jpg");
   background-repeat: no-repeat;
   background-color: var(--basic-white);
   background-size: cover;
@@ -1021,7 +1021,7 @@ td {
 /* newsletter */
 .newsletter {
   display: flex;
-  background: url("../img/mail-back.png");
+  background: url("../img/background/mail-back.png");
   border-radius: 16px;
   padding: 5px 6px;
 }
@@ -1182,6 +1182,7 @@ td {
   flex-wrap: wrap;
   list-style: none;
   min-width: 168px;
+  max-width: 168px;
   justify-content: space-between;
 }
 
@@ -1195,7 +1196,8 @@ td {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 327px;
+  min-width: 327px;
+  max-width: 327px;
 }
 
 .footer-contacts-item {
@@ -1268,6 +1270,8 @@ td {
 
 .footer-copyright {
   margin-top: -31px;
+  min-width: 190px;
+  max-width: 190px;
 }
 
 .footer-copyright-link {
@@ -1467,7 +1471,7 @@ td {
   margin: 0;
   padding: 0;
   display: flex;
-  width: 224px;
+  min-width: 550px;
   margin-top: -26px;
   margin-bottom: 1px;
 }
@@ -1869,7 +1873,7 @@ td {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, 267px);
+  grid-template-columns: repeat(auto-fill, minmax(267px, 1fr));;
   column-gap: 26px;
   row-gap: 35px;
 }
@@ -2058,12 +2062,12 @@ td {
   top: -6px;
   left: -13px;
   width: 100%;
-  height: 375px;
+  height: 100%;
   background-color: var(--basic-white);
   opacity: 0.2;
   box-shadow: 0px 20px 20px rgb(0 0 0 / 20%);
   border-radius: 4px;
-  padding: 6px 13px 21px 13px;
+  padding: 6px 13px 66px 13px;
   visibility: hidden;
 }
 
