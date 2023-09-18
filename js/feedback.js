@@ -13,8 +13,8 @@ document.querySelector('.feedback-button-close').addEventListener('click', () =>
   overlay.classList.remove('modal-show');
 });
 
-document.addEventListener('keydown', () => {
-  if ('evt'.key === 'Escape') {
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
   overlay.classList.remove('modal-show');
   }
 });
