@@ -55,6 +55,8 @@
   --grey: #999999;
   /* placeholder-color */
   --link-hover: #FFBC9E;
+  /* input-hover */
+  --input-hover: rgba(178, 178, 178, 0.52);
 }
 
 /* body основные/превуалирующие параметры */
@@ -178,7 +180,7 @@ td {
   padding-right: 13px;
 }
 
-.current-site-item .site-navigation-link {
+.current-site-item {
   background-color: var(--catalog-red);
   color: var(--basic-white);
   border-radius: 26px;
@@ -281,7 +283,7 @@ td {
 }
 
 .user-navigation-input:hover {
-  border: 2px solid var(--link-hover);
+  border: 2px solid var(--input-hover);
   outline: 0;
   border-radius: 4px;
 }
@@ -385,7 +387,10 @@ td {
   color: var(--full-black);
   border-bottom: 1px solid rgba(50, 50, 50, 0.3);
 }
-
+.form-login-link:hover {
+  color: var(--link-hover);
+  border-bottom: 1px solid var(--link-hover);
+}
 .user-navigation-cart-link {
   font-weight: 500;
   font-size: 14px;
@@ -761,6 +766,7 @@ td {
   height: 21px;
   border: 2px solid #FFFFFF;
   border-radius: 50%;
+  cursor: pointer;
   background-color: transparent;
 }
 
@@ -856,6 +862,9 @@ td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.hits-item-desc:hover, .catalog-item-desc:hover {
+  border-bottom: 1px solid var(--link-hover);
+}
 /* также повторяется для айтемов каталога */
 .icecream-jpg {
   border-radius: 50%;
@@ -1304,14 +1313,15 @@ td {
 }
 
 .feedback-form {
-  box-sizing: border-box;
-  background-color: var(--white-beige);
-  border-radius: 6px;
   position: absolute;
   left: 50%;
   top: 50%;
   display: block;
+  min-height: 441px;
   width: 477px;
+  box-sizing: border-box;
+  background-color: var(--white-beige);
+  border-radius: 6px;
   transform: translate(-50%, -50%);
   padding-left: 24px;
   padding-top: 14px;
@@ -1319,7 +1329,7 @@ td {
   padding-bottom: 27px;
 }
 
-.feedback-form h2 {
+.feedback-tittle {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
@@ -1478,13 +1488,13 @@ td {
 }
 
 .catalog-breadcrumbs-item {
-  margin-left: 22px;
+  margin-right: 22px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
 
-.catalog-breadcrumbs-item:nth-child(1) {
+.catalog-breadcrumbs-item:nth-last-child(1) {
   margin-left: 0;
 }
 
@@ -1641,6 +1651,7 @@ td {
 
 .range-toggle:hover {
   transform: scale(1.135);
+  border: 8px solid var(--basic-white);
 }
 
 .toggle-left {
@@ -1802,6 +1813,7 @@ td {
 .filter-extender::before {
   content: '';
   position: absolute;
+  top: 0;
   display: flex;
   align-items: center;
   background-image: url("../img/icon-svg/checkbox-off.svg");
@@ -1836,6 +1848,7 @@ td {
 }
 
 .filter-button {
+  width: 144px;
   font-weight: 500;
   line-height: 18px;
   min-height: 36px;
@@ -1845,7 +1858,7 @@ td {
   border-style: solid;
   border-color: var(--basic-white);
   border-radius: 20px;
-  margin-left: 15px;
+  margin-left: 14px;
   margin-top: 10px;
   padding: 7px 26px;
   min-height: 36px;
@@ -2118,6 +2131,7 @@ td {
 .hits-item-content::after {
   position: absolute;
   content: "";
+  top: 0;
   width: 61px;
   height: 61px;
   left: 0;
