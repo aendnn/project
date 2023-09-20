@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="img/png" sizes="32x32" href="img/32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/32x32.png">
 </head>
 
 <body class="page-body">
@@ -360,7 +360,10 @@
   </div>
   <section class="social-feedback feedback-overlay">
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
-      <h3 class="feedback-tittle">Мы обязательно вам ответим!</h3>
+      <div class="feedback-tittle-block">
+        <h3 class="feedback-tittle">Мы обязательно вам ответим!</h3>
+        <button class="feedback-button-close" type="button" aria-label="Закрыть"><span class="visually-hidden">Закрыть окно</span></button>
+      </div>
       <div class="feedback-sign">
         <label class="feedback-login visually-hidden" for="username">Имя Фамилия</label>
         <input class="feedback-input feedback-login-input" type="text" name="username" autocomplete="off" id="username" placeholder="Имя Фамилия" required>
@@ -375,7 +378,6 @@
       </div>
       <div class="feedback-user-button">
         <button class="button feedback-button" type="submit">Отправить</button>
-        <button class="feedback-button-close" type="button" aria-label="Закрыть"><span class="visually-hidden">Закрыть окно</span></button>
       </div>
     </form>
   </section>
