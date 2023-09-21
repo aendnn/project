@@ -186,6 +186,10 @@ td {
   border-radius: 26px;
 }
 
+.current-site-item .site-navigation-text {
+  border-bottom: none; /*можно сделать колор транспарент. но думаю правильнее none*/
+}
+
 .site-navigation-item:not(.site-navigation-item:nth-of-type(1)) {
   margin-left: 7px;
 }
@@ -1643,7 +1647,7 @@ td {
   content: "";
   width: 20px;
   height: 20px;
-  border: 8px solid rgba(255, 255, 255, 0.8);
+  border: 8px solid var(--basic-white);
   background-color: #ABABAB;
   border-radius: 50%;
   cursor: pointer;
@@ -1764,17 +1768,20 @@ td {
   background-color: var(--basic-white);
 }
 
-.custom-radio:disabled::before {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
 .real-radio:checked + .filter-fat .custom-radio::before {
   opacity: 1;
   background-repeat: no-repeat;
 }
 
-.real-radio:checked + .filter-fat .custom-radio:disabled::before {
+.real-radio:disabled + .filter-fat .custom-radio {
+  border: 3px solid black;
   opacity: 0.4;
+  background-repeat: no-repeat;
+}
+
+.real-radio:disabled + .filter-fat .custom-radio::before {
+  background-color: black;
+  opacity: 1;
   background-repeat: no-repeat;
 }
 
@@ -1846,17 +1853,7 @@ td {
   opacity: 1;
 }
 
-.filter-extender:disabled::before {
-  content: '';
-  position: absolute;
-  display: flex;
-  align-items: center;
-  background-image: url("../img/icon-svg/checkbox-off.svg");
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-  opacity: 0.4;
-}
+
 
 .real-checkbox:checked + .filter-extender::before {
   background-image: url("../img/icon-svg/checkbox-on.svg");
@@ -1866,12 +1863,12 @@ td {
   transition: 0.1s;
 }
 
-.real-checkbox:checked + .filter-extender:disabled::before {
+.real-checkbox:disabled + .filter-extender::before {
   background-image: url("../img/icon-svg/checkbox-on.svg");
   background-repeat: no-repeat;
   width: 24px;
   height: 20px;
-  transition: 0.1s;
+  opacity: 0.4
 }
 
 .extender-text:not(:nth-of-type(1)) {
