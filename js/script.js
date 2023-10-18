@@ -1,5 +1,3 @@
-customSelect('select');
-
 // slider
 const toggles = document.querySelectorAll('.slider-button');
 const slides = document.querySelectorAll('.big-offers-slide');

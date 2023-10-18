@@ -57,6 +57,8 @@
   --link-hover: #FFBC9E;
   /* input-hover */
   --input-hover: rgba(178, 178, 178, 0.52);
+  /* selectOpen */
+  --select-off: rgba(255, 255, 255, 0.2);
 }
 
 /* body основные/превуалирующие параметры */
@@ -178,6 +180,7 @@ td {
   padding-bottom: 7px;
   padding-left: 13px;
   padding-right: 13px;
+  cursor: pointer;
 }
 
 .current-site-item {
@@ -187,7 +190,7 @@ td {
 }
 
 .current-site-item .site-navigation-text {
-  border-bottom: none; /*можно сделать колор транспарент. но думаю правильнее none*/
+  border-bottom: none;
 }
 
 .site-navigation-item:not(.site-navigation-item:nth-of-type(1)) {
@@ -587,6 +590,7 @@ td {
 
 .catalog-navigation-item {
   position: relative;
+  cursor: pointer;
 }
 
 .catalog-navigation-link b {
@@ -1368,11 +1372,12 @@ td {
 .feedback-button-close {
   position: relative;
   width: 23px;
-  height: 23px;
+  height: 20px;
   background-color: transparent;
   border: 0;
   cursor: pointer;
   padding: 0;
+  margin-right: -11px;
 }
 
 .feedback-button-close::before,
@@ -1383,7 +1388,7 @@ td {
   width: 19px;
   height: 2px;
   top: 7px;
-  left: 14px;
+  left: 3px;
 }
 
 .feedback-button-close::before {
@@ -1574,7 +1579,16 @@ td {
   color: var(--full-black);
 }
 
+.is-open .custom-select-opener {
+  color: var(--full-black);
+}
+
 .custom-select-opener:hover::after {
+  background-image: url("../img/icon-svg/triangleBlack.svg");
+  transform: rotate(180deg);
+}
+
+.is-open .custom-select-opener::after {
   background-image: url("../img/icon-svg/triangleBlack.svg");
   transform: rotate(180deg);
 }
@@ -1755,34 +1769,33 @@ td {
   position: absolute;
   width: 7.92px;
   height: 7.92px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--basic-white);
+  opacity: 0.8;
   background-repeat: no-repeat;
   border-radius: 50%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  visibility: hidden;
 }
 
 .custom-radio:hover::before {
-  background-color: var(--basic-white);
-}
-
-.real-radio:checked + .filter-fat .custom-radio::before {
   opacity: 1;
-  background-repeat: no-repeat;
 }
 
 .real-radio:disabled + .filter-fat .custom-radio {
-  border: 3px solid black;
   opacity: 0.4;
-  background-repeat: no-repeat;
+  border-color: var(--basic-white);
 }
 
-.real-radio:disabled + .filter-fat .custom-radio::before {
-  background-color: black;
+.real-radio:checked:disabled + .filter-fat .custom-radio::before {
+  visibility: visible;
+  background-color: var(--basic-white);
   opacity: 1;
-  background-repeat: no-repeat;
+}
+
+.real-radio:checked + .filter-fat .custom-radio::before {
+  visibility: visible;
 }
 
 .filter-fat:not:first-child {
@@ -1803,6 +1816,14 @@ td {
   line-height: 18px;
   color: var(--blue-gray);
   margin-left: 0;
+}
+
+.filter-off {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-on {
+  background-color: var(--basic-white);
 }
 
 .filter-sorting:hover {
@@ -1864,6 +1885,14 @@ td {
 }
 
 .real-checkbox:disabled + .filter-extender::before {
+  background-image: url("../img/icon-svg/checkbox-off.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 20px;
+  opacity: 0.4
+}
+
+.real-checkbox:checked:disabled + .filter-extender::before {
   background-image: url("../img/icon-svg/checkbox-on.svg");
   background-repeat: no-repeat;
   width: 24px;
@@ -2010,7 +2039,6 @@ td {
   background-repeat: no-repeat;
   background-position: center;
   transform: rotate(-180deg);
-  opacity: 0.2;
   margin-right: 10px;
 }
 
@@ -2019,10 +2047,22 @@ td {
   background-repeat: no-repeat;
   background-position: right;
   margin-left: 5px;
+  opacity: 0.2;
+}
+
+.pagination-item:last-child:hover {
+  opacity: 0.5;
+}
+
+.pagination-item:last-child:active {
+  opacity: 1;
 }
 
 .pagination-item:not(:first-child, :last-child) {
   margin-right: 5px;
+}
+.disabled-item {
+  opacity: 0.2;
 }
 
 .visually-hidden {
